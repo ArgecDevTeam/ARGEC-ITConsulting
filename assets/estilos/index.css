@@ -1,0 +1,11 @@
+.servicios {
+  padding: 5rem 0;
+  width: 1100px;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.servicios__contenedor {
+  margin: 40px;
+  display: flex;
+}
