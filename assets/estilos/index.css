@@ -1,11 +1,78 @@
 .servicios {
-  padding: 5rem 0;
   width: 1100px;
-  height: 800px;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .servicios__contenedor {
-  margin: 40px;
+  margin: 20px;
   display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 340px;
+  height: 280px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.img {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  opacity: .1;
+}
+
+.img img {
+  height: 80px;
+}
+
+.servicios__contenedor-tarjeta {
+  margin: 80px auto 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+.servicios__contenedor-tarjeta h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.servicios__contenedor-tarjeta p {
+  font-size: .9rem;
+}
+
+.card:hover {
+  background-color: #0248ac;
+  color: #fff;
+}
+
+.servicios-boton {
+  height: 60px;
+  width: 150px;
+  border-radius: 18px;
+  background-color: #d86b27;
+  margin-top: 60px;
+}
+
+.servicios-boton a {
+  height: 60px;
+  width: 150px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.servicios-boton:hover {
+  background-color: #aa521c;
 }
