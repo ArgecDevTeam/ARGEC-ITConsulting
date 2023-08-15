@@ -25,7 +25,7 @@
   position: absolute;
   top: 8px;
   left: 20px;
-  opacity: .1;
+  opacity: .09;
 }
 
 .img img {
@@ -47,7 +47,7 @@
   font-size: .9rem;
 }
 
-.card:hover {
+.card:hover{
   background-color: #0248ac;
   color: #fff;
 }
@@ -75,4 +75,59 @@
 
 .servicios-boton:hover {
   background-color: #aa521c;
+}
+
+/* Trabajo */
+
+.trabajo {
+  width: 1100px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.trabajo__contenedor {
+  height: 400px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center
+}
+
+.trabajo__contenedor-tarjeta {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.card-trabajo {
+  border-radius: 20px;
+  transition: all .3s;
+}
+
+.card-trabajo-card {
+  border-radius: 18px;
+  transition: all .2s;
+}
+
+.card-trabajo-card:hover {
+  border-radius: 20px;
+}
+
+.card-trabajo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 1px #3c83e6;
+}
+
+.trabajo__contenedor-tarjeta h4 {
+  color: #9c0490;
+}
+
+.trabajo__contenedor-tarjeta p {
+  font-size: 12px;
+  color: #42026d;
 }
