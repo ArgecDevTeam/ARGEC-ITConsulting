@@ -151,7 +151,16 @@ nav {
   padding-right: 4rem;
 }
 
+.footer__redes a {
+  color: #000;
+  text-decoration: none;
+}
+
 .footer__redes i {
   font-size: 22px;
+}
+
+.footer__redes a:hover {
+  transform: scale(1.2);
 }
 
