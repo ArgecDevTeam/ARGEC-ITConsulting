@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="slider__box">
+    <div class="header__slider-box">
       <ul>
         <li><img src="./assets/img/Header1.webp" alt="Heder animado"></li>
         <li><img src="./assets/img/Header2.webp" alt="Heder animado"></li>
@@ -18,32 +18,30 @@
         <li><img src="./assets/img/Header4.webp" alt="Heder animado"></li>
       </ul>
     </div>
-    <div class="menu">
-      <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__logo">
+    <div class="header__menu">
+      <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo">
 
       <nav>
-        <ul class="header__menu">
-          <li class="header__menu-item header__menu-item--active"><a href="./index.html">Inicio</a></li>
-          <li class="header__menu-item"><a href="./about.html">Acerca Nuestro</a></li>
-          <li class="header__menu-item"><a href="./contac.html">Contáctenos</a></li>
+        <ul class="header__menu-items">
+          <li class="header__menu-links header__menu-links--active"><a href="./index.html">Inicio</a></li>
+          <li class="header__menu-links"><a href="./about.html">Acerca Nuestro</a></li>
+          <li class="header__menu-links"><a href="./contac.html">Contáctenos</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <section class="tarjeta">
-    <div class="tarjeta-contenedor">
-      <div class="tarjeta-contenedor-color">
-        <div class="logo">
-          <img src="./assets/img/argec-header-no-background.webp" alt="">
+    <div class="tarjeta__contenedor">
+      <div class="tarjeta__logo">
+        <img src="./assets/img/argec-header-no-background.webp" alt="Logo de ARGEC">
+      </div>
+      <div class="tarjeta__info">
+        <div>
+          ¿Necesitan potenciar sus procesos de reclutamiento?
         </div>
-        <div class="info">
-          <div>
-            ¿Necesitan potenciar sus procesos de reclutamiento?
-          </div>
-          <div>
-            ¿Necesitan mejorar el impacto visual y en redes de su organización?
-          </div>
+        <div>
+          ¿Necesitan mejorar el impacto visual y en redes de su organización?
         </div>
       </div>
     </div>
@@ -52,22 +50,20 @@
   <section class="servicios">
     <h2 class="titulo">Nuestros Servicios</h2>
     <div class="servicios__contenedor">
-      <div class="card card-1">
-        <div class="img">
-          <img src="./assets/img/it-Recruitment.webp" alt="IT Recruitment">      
+      <div class="servicios__contenedor-tarjeta">
+        <div class="servicios__tarjeta-img--lupa">
         </div>
-        <div class="servicios__contenedor-tarjeta">
+        <div class="servicios__tarjeta-info">
           <h4>Reclutamiento IT:</h4>
           <p>
             Encontramos a tu candidato ideal. ¿Cómo? Contamos con un equipo especializado de reclutadores con una amplia y actualizada base de datos de candidatos a la espera de poder ser utilizada para cubrir tus vacantes.
           </p>
         </div>
       </div>
-      <div class="card">
-        <div class="img">
-          <img src="./assets/img/it-Recruitment-course.webp" alt="IT Recruitment course">
+      <div class="servicios__contenedor-tarjeta">
+        <div class="servicios__tarjeta-img--cursos">
         </div>
-        <div class="servicios__contenedor-tarjeta">
+        <div class="servicios__tarjeta-info">
           <h4>Cursos de Reclutamiento IT:</h4>
           <p>
             Entendemos que el mercado requiere reclutadores altamente especializados. 
@@ -75,11 +71,10 @@
           <p>La tecnología, las nuevas herramientas, plataformas y programas, están en evolución constante, por lo que nos preocupamos en estar constantemente actualizados también. </p>
         </div>
       </div>
-      <div class="card">
-        <div class="img">
-          <img src="./assets/img/web-Development.webp" alt="Web development">
+      <div class="servicios__contenedor-tarjeta">
+        <div class="servicios__tarjeta-img--desarrollo">
         </div>
-        <div class="servicios__contenedor-tarjeta">
+        <div class="servicios__tarjeta-info">
           <h4>Desarrollo web:</h4>
           <p>
             También estamos al tanto de las necesidades de pequeñas y medianas empresas en mejorar su impacto visual en el mercado y establecer una fuerte presencia online. Es por ello, que ofrecemos asistencia en la creación de sitios webs competitivos y acordes a poder cumplir sus objetivos. 
@@ -87,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="servicios-boton">
+    <div class="servicios__boton">
       <a href="./contac.html">Contáctenos</a>
     </div>
   </section>
@@ -95,26 +90,26 @@
   <section class="trabajo">
     <h2 class="titulo">Nuestra forma de trabajar</h2>
     <div class="trabajo__contenedor">
-      <div class="card-trabajo">
-        <div class="trabajo__contenedor-tarjeta card-trabajo-card">
+      <div class="trabajo__tarjeta">
+        <div class="trabajo__tarjeta-info">
           <h4>Lorem ipsum</h4>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus mollitia nulla dolorum culpa modi autem laborum minima itaque quod, quia eaque eligendi labore voluptates quos sequi! Aspernatur quibusdam illo autem.</p>
         </div>
       </div>
-      <div class="card-trabajo">
-        <div class="trabajo__contenedor-tarjeta card-trabajo-card">
+      <div class="trabajo__tarjeta">
+        <div class="trabajo__tarjeta-info">
           <h4>Lorem ipsum</h4>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus mollitia nulla dolorum culpa modi autem laborum minima itaque quod, quia eaque eligendi labore voluptates quos sequi! Aspernatur quibusdam illo autem.</p>
         </div>
       </div>
-      <div class="card-trabajo">
-        <div class="trabajo__contenedor-tarjeta card-trabajo-card">
+      <div class="trabajo__tarjeta">
+        <div class="trabajo__tarjeta-info">
           <h4>Lorem ipsum</h4>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus mollitia nulla dolorum culpa modi autem laborum minima itaque quod, quia eaque eligendi labore voluptates quos sequi! Aspernatur quibusdam illo autem.</p>
         </div>
       </div>
-      <div class="card-trabajo">
-        <div class="trabajo__contenedor-tarjeta card-trabajo-card">
+      <div class="trabajo__tarjeta">
+        <div class="trabajo__tarjeta-info">
           <h4>Lorem ipsum</h4>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus mollitia nulla dolorum culpa modi autem laborum minima itaque quod, quia eaque eligendi labore voluptates quos sequi! Aspernatur quibusdam illo autem.</p>
         </div>
@@ -123,68 +118,68 @@
   </section>
 
   <section class="argec">
-    <h2 class="argec-titulo">Porque elegir ARGEC - IT Consulting?</h2>
-    <div class="argec-respuesta">
+    <h2 class="argec__titulo">Porque elegir ARGEC - IT Consulting?</h2>
+    <div class="argec__respuesta">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, eligendi facilis sed sapiente natus ratione
     </div>
-    <div class="argec-contenedor">
-      <div class="argec-contendor-1">
-        <div class="argec-item">
-          <div class="argec-item-contenedor">
+    <div class="argec__contenedor">
+      <div class="argec__contendor-items">
+        <div class="argec__item">
+          <div class="argec__item-icono">
             <i class="fa-solid fa-people-group"></i>
           </div>
-          <div class="argec-item-contenedor-info">
+          <div class="argec__item-info">
             <h5>Lorem ipsum dolor</h5>
             <p>Lorem, ipsum dolor sit amet consectetur</p>
           </div>
         </div>
-        <div class="argec-item">
-          <div class="argec-item-contenedor">
+        <div class="argec__item">
+          <div class="argec__item-icono">
             <i class="fa-solid fa-people-group"></i>
           </div>
-          <div class="argec-item-contenedor-info">
+          <div class="argec__item-info">
             <h5>Lorem ipsum dolor</h5>
             <p>Lorem, ipsum dolor sit amet consectetur</p>
           </div>
         </div>
-        <div class="argec-item">
-          <div class="argec-item-contenedor">
+        <div class="argec__item">
+          <div class="argec__item-icono">
             <i class="fa-solid fa-people-group"></i>
           </div>
-          <div class="argec-item-contenedor-info">
+          <div class="argec__item-info">
             <h5>Lorem ipsum dolor</h5>
             <p>Lorem, ipsum dolor sit amet consectetur</p>
           </div>
         </div>
-        <div class="argec-item">
-          <div class="argec-item-contenedor">
+        <div class="argec__item">
+          <div class="argec__item-icono">
             <i class="fa-solid fa-people-group"></i>
           </div>
-          <div class="argec-item-contenedor-info">
+          <div class="argec__item-info">
             <h5>Lorem ipsum dolor</h5>
             <p>Lorem, ipsum dolor sit amet consectetur</p>
           </div>
         </div>
-        <div class="argec-item">
-          <div class="argec-item-contenedor">
+        <div class="argec__item">
+          <div class="argec__item-icono">
             <i class="fa-solid fa-people-group"></i>
           </div>
-          <div class="argec-item-contenedor-info">
+          <div class="argec__item-info">
             <h5>Lorem ipsum dolor</h5>
             <p>Lorem, ipsum dolor sit amet consectetur</p>
           </div>
         </div>
-        <div class="argec-item">
-          <div class="argec-item-contenedor">
+        <div class="argec__item">
+          <div class="argec__item-icono">
             <i class="fa-solid fa-people-group"></i>
           </div>
-          <div class="argec-item-contenedor-info">
+          <div class="argec__item-info">
             <h5>Lorem ipsum dolor</h5>
             <p>Lorem, ipsum dolor sit amet consectetur</p>
           </div>
         </div>
       </div>
-      <div class="argec-contenedor-2">
+      <div class="argec__contenedor-imagen">
         <img src="./assets/img/Header3.webp" alt="imagen">
       </div>
     </div>
