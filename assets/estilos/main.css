@@ -9,16 +9,12 @@
 
 /* Estilos generales */
 
-.contenedor {
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
 .titulo {
   color: #0248ac;
   font-size: 50px;
   width: 1100px;
   text-align: center;
+  font-weight: 500;
 }
 
 /* Header */
@@ -70,10 +66,12 @@
 
 .header__menu {
   position: absolute;
-  top: 40px;
+  height: 6rem;
+  top: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.575);
 }
 
 .header__menu-logo {
