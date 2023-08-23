@@ -84,7 +84,7 @@
 }
 
 .servicios__contenedor-tarjeta {
-  width: 340px;
+  width: 380px;
   height: 280px;
   position: relative;
   border-radius: 20px;
@@ -211,7 +211,7 @@
 }
 
 .separador-contenedor {
-  background: rgb(12,0,251);
+  background: rgb(60, 0, 255);
   background: linear-gradient(100deg, rgba(60, 0, 255, 0.973) 47%, rgba(78, 160, 253, 0.966) 91%);
   height: 100%;
   width: 100%;
@@ -262,6 +262,10 @@
 .trabajo__tarjeta {
   border-radius: 20px;
   transition: all .3s;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .trabajo__tarjeta:hover {
@@ -310,10 +314,10 @@
 
 .container-argec {
   background: rgb(91,115,242);
-  background: linear-gradient(280deg, rgba(91, 116, 242, 0.863) 10%, rgba(60, 0, 255, 0.966) 58%);
+  background: linear-gradient(280deg, rgba(91, 116, 242, 0.863) 10%, rgba(60, 0, 255, 0.979) 58%);
   height: 100%;
   width: 100%;
-  padding-top: 20px;
+  padding: 20px 0 40px;
 }
 
 .argec__titulo {
@@ -336,7 +340,7 @@
 }
 
 .argec__contendor-items {
-  flex-basis: 50%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -375,7 +379,13 @@
   color: #fff;
 }
 
+.argec__contenedor-imagen {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
 .argec__contenedor-imagen img {
-  height: 400px;
-  width: 100%;
+  height: 360px;
+  width: 600px;
 }
