@@ -16,8 +16,8 @@
 }
 
 .tarjeta__contenedor{
-  background: rgba(0, 133, 249, 0.856);
-  background: linear-gradient(90deg, rgba(2, 133, 248, 0.932) 44%, rgba(60, 0, 255, 0.74) 94%);
+  background: rgb(0, 133, 249);
+  background: linear-gradient(90deg, rgba(26, 212, 245, 0.877) 44%, rgba(60, 0, 255, 0.74) 94%);
   height: 250px;
   border-radius: 40px;
   display: flex;
@@ -90,7 +90,6 @@
   border-radius: 20px;
   z-index: 100;
   background-color: #fff;
-  border: 1.4px #393cfc solid;
 }
 
 .servicios__tarjeta-info {
@@ -109,9 +108,9 @@
 }
 
 .servicios__contenedor-tarjeta:hover{
-  background-color: #0249acd8;
+  background-color: #1455cec2;
   color: #fff;
-  box-shadow: 0px 0px 25px 4px #0249acd8;
+  box-shadow: 0px 0px 10px 4px #0249acec;
 }
 
 /* Estilos para las imagenes de los servicios */
@@ -171,7 +170,7 @@
   height: 60px;
   width: 150px;
   border-radius: 18px;
-  background-color: #393cfc;
+  background-color: #1455ceef;
   margin: 10px 0 100px;
 }
 
@@ -200,7 +199,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: -100px;
+  top: -80px;
 }
 
 .separador-img {
@@ -212,8 +211,8 @@
 }
 
 .separador-contenedor {
-  background: rgb(125,238,151);
-  background: linear-gradient(280deg, rgba(125, 238, 151, 0.89) 6%, rgba(55, 201, 238, 0.945) 32%);
+  background: rgb(12,0,251);
+  background: linear-gradient(100deg, rgba(60, 0, 255, 0.973) 47%, rgba(78, 160, 253, 0.966) 91%);
   height: 100%;
   width: 100%;
   display: flex;
@@ -234,7 +233,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #393cfc;
+  color: #fff;
   font-size: 2rem;
   padding: 50px;
   font-weight: 500;
@@ -245,7 +244,6 @@
 
 .trabajo {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -268,7 +266,7 @@
 
 .trabajo__tarjeta:hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 10px 1px #9c0490;
+  box-shadow: 0px 0px 10px 1px rgba(60, 0, 255, 0.973);
 }
 
 .trabajo__tarjeta-info {
@@ -288,7 +286,9 @@
 }
 
 .trabajo__tarjeta-info h4 {
-  color: #9c0490;
+  color: rgb(240, 151, 34);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .trabajo__tarjeta-info p {
@@ -299,7 +299,6 @@
 /* Porque elegir ARGEC - IT Consulting? */
 
 .argec {
-  height: 100vh;
   width: 100%;
 }
 
@@ -311,9 +310,10 @@
 
 .container-argec {
   background: rgb(91,115,242);
-  background: linear-gradient(280deg, rgba(91, 116, 242, 0.863) 10%, rgba(38, 0, 251, 0.918) 58%);
+  background: linear-gradient(280deg, rgba(91, 116, 242, 0.863) 10%, rgba(60, 0, 255, 0.966) 58%);
   height: 100%;
   width: 100%;
+  padding-top: 20px;
 }
 
 .argec__titulo {
