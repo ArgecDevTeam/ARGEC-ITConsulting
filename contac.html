@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=0.0">
-  <link rel="shortcut icon" href="./assets/img/No background2.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/img/No-background2.webp" type="image/x-icon">
   <title>ARGEC - IT Consulting</title>
   <link rel="stylesheet" href="./assets/estilos/main.css">
-  <link rel="stylesheet" href="./assets/estilos/contac.css">
+  <link rel="stylesheet" href="./assets/estilos/contact.css">
 </head>
 <body>
   <header class="header">
@@ -31,23 +31,32 @@
     </div>
   </header>
     <section class="formulario">
-        <h1 class="titulo">Contáctenos</h1>
-        <div class="formulario--texto">los campos con * son obligatorios</div>
-        <form method="post">
-            <div class ="formulario--input">
-              <label for="nombre">nombre:</label>
-              <input type="text" id="nombre">
+        <h1 class="titulo" style="margin-top: 40px;">Contáctenos</h1>
+        <div class="formulario__contenedor">
+          <div class="formulario__texto">Los campos con <span>*</span> son obligatorios</div>
+          <div class="form">
+            <form id="contact-form">
+              <div class="contenedor__input">
+                <div class ="formulario__input">
+                  <label for="from_name">Nombre <span>*</span></label>
+                  <input type="text" name="from_name" id="from_name" required>
+                </div>
+                <div class ="formulario__input">
+                  <label for="email">E-mail <span>*</span></label>
+                  <input type="text" name="email" id="email" required>
+                </div>
+                <div class ="formulario__input">
+                  <label for="message">Mensaje <span>*</span></label>
+                  <textarea type="text" name="message" id="message" required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="formulario__boton" >Enviar</button>
+            </form>
+            <div class="imagen">
+              <img src="./assets/img/contacto-2.jpg" alt="">
             </div>
-            <div class ="formulario--input">
-              <label for="email">e-mail:</label>
-              <input type="text" id="email">
-            </div>
-            <div class ="formulario--input">
-              <label for="mensaje">mensaje:</label>
-              <input type="text" id="mensaje">
-            </div>
-            <button class="formulario--boton">enviar</button>
-        </form>
+          </div>
+        </div>
     </section>
     <footer class="footer">
       <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
@@ -67,6 +76,27 @@
       </div>
     </footer>
     <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('b3VeSOQeiCy1asiDJ');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_aj42lim', 'template_iztg334', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
 

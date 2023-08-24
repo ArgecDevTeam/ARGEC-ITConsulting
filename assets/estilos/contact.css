@@ -1,0 +1,195 @@
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario__contenedor {
+  width: 1000px;
+  height: 600px;
+  margin-top: 30px;
+}
+
+.formulario__texto {
+  font-size: 1.2rem;
+}
+
+span {
+  color: red;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  gap: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+form {
+  height: 100%;
+  width: 550px;
+}
+
+.contenedor__input {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0 20px;
+}
+
+.formulario__input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formulario__input input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 400px;
+  border: 1px solid #515151;
+  background: transparent;
+  border-radius: 15px;
+}
+
+.formulario__input input:focus, textarea:focus {
+  outline: 1px rgb(60, 0, 255) solid;
+}
+
+.formulario__input textarea {
+  height: 160px;
+  width: 400px;
+  resize: none;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: 1px solid #515151;
+  background: transparent;
+  border-radius: 15px;
+}
+
+.formulario__input label {
+  margin-left: 8px;
+}
+
+.formulario__boton {
+  height: 40px;
+  width: 140px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background-color: blue;
+  color: #fff;
+  font-size: 1rem;
+  margin: 20px;
+}
+
+.imagen {
+  height: 100%;
+  width: 450px;
+}
+
+.imagen img {
+  height: 428px;
+  width: 100%;
+}
+
+
+/* 
+.group {
+  position: relative;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.input:focus {
+  outline: none;
+}
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+} */
