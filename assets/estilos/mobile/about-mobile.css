@@ -1,0 +1,11 @@
+/* Medidas para mobile */
+
+@media (max-width: 858px) {
+  .about__contenedor {
+    width: 100%;
+  }
+
+  .about__fundador {
+    text-align: center;
+  }
+}

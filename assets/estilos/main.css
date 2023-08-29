@@ -7,16 +7,6 @@
   box-sizing: border-box;
 }
 
-/* Estilos generales */
-
-.titulo {
-  color: #0248ac;
-  font-size: 50px;
-  width: 1100px;
-  text-align: center;
-  font-weight: 500;
-}
-
 /* Header */
 
 .header {
@@ -132,61 +122,6 @@ nav {
   display: none;
 }
 
-@media (max-width: 858px) {
-  .header {
-    height: auto;
-  }
-
-  .header__menu {
-    width: 100%;
-    border: 1px purple solid;
-    justify-content: space-around;
-  }
-  
-  .checkbtn {
-    display: block;
-  }
-
-  .header__menu-items {
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-    position: fixed;
-    width: 100%;
-    height: 40vh;
-    background-color: rgba(255, 255, 255, 0.575);
-    left: 0;
-    top: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  
-  #check:checked ~ ul {
-    top: 6rem;
-  }
-
-  .header__menu-logo {
-    width: 11rem;
-    margin-left: 0;
-  }
-
-  .header__slider-box {
-    border: 3px blue solid;
-    height: 100%;
-    position: relative;
-    top: 6rem;
-  }
-
-  .header__slider-box img {
-    border: 1px green solid;
-    height: 100%;
-  }
-
-  nav {
-    margin-right: 0;
-  }
-}
-
 /* Footer */
 
 .footer {
@@ -222,3 +157,85 @@ nav {
   transform: scale(1.2);
 }
 
+
+@media (max-width: 858px) {
+  .header {
+    height: 42.5vh;
+  }
+
+  .header__menu {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .checkbtn {
+    display: block;
+    margin-right: 28px;
+  }
+
+  .header__menu-items {
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    position: fixed;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.575);
+    left: 0;
+    top: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  
+  #check:checked ~ ul {
+    top: 6rem;
+  }
+
+  .header__menu-logo {
+    width: 11rem;
+    margin-left: 28px;
+  }
+
+  .header__slider-box {
+    height: 100%;
+    position: relative;
+    top: 6rem;
+  }
+
+  .header__slider-box img {
+    height: 100%;
+  }
+
+  nav {
+    margin-right: 0;
+  }
+
+  .header__menu-links--active a {
+    border: none;
+    font-weight: 500;
+  }
+
+  /* Footer */
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+  }
+
+  .footer__logo {
+    margin-left: 0;
+  }
+  
+  .footer__redes {
+    margin-top: 20px;
+    padding-right: 0;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .footer__redes i {
+    font-size: 35px;
+  }
+}
