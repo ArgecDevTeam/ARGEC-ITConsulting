@@ -1,6 +1,4 @@
-/* Medidas para mobile */
-
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1023px){
   /* Seccion tarjeta */
   
   .tarjeta {
@@ -10,13 +8,10 @@
   }
 
   .tarjeta__contenedor {
-    height: 340px;
-    width: 350px;
-    flex-direction: column;
+    height: 300px;
+    width: 720px;
     border-radius: 24px;
     justify-content: center;
-    background: rgb(0, 133, 249);
-    background: linear-gradient(180deg, rgba(26, 212, 245, 0.877) 44%, rgba(60, 0, 255, 0.74) 94%);
   }
 
   .tarjeta__logo img {
@@ -51,22 +46,21 @@
   /* Separador */
   
   .separador {
-    height: 70vh;
-    padding: 60px 0;
+    height: 32vh;
+    padding: 0;
     top: 0;
     align-items: center;
   }
 
   .separador-img {
     width: 100%;
-    height: 430px;
+    height: 230px;
     border-radius: 0;
   }
 
   .separador-contenedor {
-    flex-direction: column;
     width: 100%;
-    height: 430px;
+    height: 230px;
   }
 
   .imagen {
@@ -76,7 +70,6 @@
 
   .separador-frase {
     width: 100%;
-    height: 284px;
     padding: 0 10px;
   }
 
@@ -113,11 +106,17 @@
   }
 
   .argec__contenedor-imagen {
-    display: none;
+    width: 100%;
+  }
+
+  .argec__contenedor-imagen img {
+    width: 100%;
+    height: 100%;
   }
 
   .argec__contenedor {
     justify-content: center;
+    flex-direction: column;
   }
 
   .argec__contenedor-items {

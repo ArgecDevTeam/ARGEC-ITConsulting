@@ -1,27 +1,26 @@
-/* Medidas para mobile */
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) and (max-width: 1023px){
   .formulario__contenedor {
     width: 100%;
   }
 
   .formulario__texto {
-    text-align: center;
+    margin-left: 32px;
   }
 
   form {
-    width: 360px;
+    width: 720px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .formulario__input input {
-    width: 340px;
+    width: 700px;
   }
 
   .formulario__input textarea {
-    width: 340px;
+    width: 700px;
   }
 
   .imagen {
