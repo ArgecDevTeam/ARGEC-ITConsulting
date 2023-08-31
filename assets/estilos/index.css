@@ -418,6 +418,15 @@
   align-items: center;
 }
 
+.clientes__contenedor {
+  background-color: rgba(255, 255, 255, 0.596);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .clientes__contenedor h2 {
   color: #ff7b00;
   font-size: 2.2rem;
@@ -429,12 +438,14 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cliente__item {
   width: 280px;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .cliente__item-icono {
