@@ -52,7 +52,7 @@
   
   .separador {
     height: 70vh;
-    padding: 60px 0;
+    padding: 0;
     top: 0;
     align-items: center;
   }
@@ -66,7 +66,7 @@
   .separador-contenedor {
     flex-direction: column;
     width: 100%;
-    height: 430px;
+    height: 440px;
   }
 
   .imagen {
@@ -86,14 +86,27 @@
     height: auto;
   }
 
-  .titulo-trabajo {
-    font-weight: 500;
-    margin: 40px 0;
+  .titulo__trabajo {
+    text-align: center;
   }
 
   .trabajo__contenedor {
     height: auto;
-    margin: 40px 0;
+    margin: 0 0 100px 0;
+    gap: 0;
+  }
+
+  .trabajo__tarjeta {
+    width: 330px;
+  }
+
+  .trabajo__tarjeta-info {
+    width: 100%;
+  }
+
+  .trabajo__tarjeta-info p {
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   /* Seccion porque elegir argec */
@@ -110,6 +123,7 @@
   .argec__respuesta {
     margin: 0;
     padding: 18px;
+    text-align: center;
   }
 
   .argec__contenedor-imagen {
@@ -149,5 +163,21 @@
 
   .argec__item-info p {
     font-size: 16px;
+  }
+
+  /* Seccion clientesl */
+
+  .clientes {
+    height: 65vh;
+  }
+
+  .clientes__imagen {
+    align-items: start;
+    background-position: -110px;
+  }
+
+  .clientes__items {
+    justify-content: center;
+    align-items: center;
   }
 }
