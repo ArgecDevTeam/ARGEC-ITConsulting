@@ -13,7 +13,6 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: #fff;
 }
 
 .header__slider-box {
@@ -21,6 +20,7 @@
   height: 100%;
   overflow: hidden;
   opacity: .8;
+  z-index: 100;
 }
 
 .header__slider-box ul {
@@ -63,6 +63,47 @@
   align-items: center;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.575);
+}
+
+.frase {
+  position: absolute;
+  top: 6rem;
+  background-color: rgba(255, 255, 255, 0.575);
+  height: 518px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frase p:first-child {
+  width: 1000px;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 80px;
+}
+
+.frase p:nth-child(2) {
+  width: 700px;
+  font-size: 1.15rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.frase a {
+  height: 50px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: royalblue;
+  margin-top: 100px;
+  border-radius: 20px;
 }
 
 .header__menu-logo {
@@ -167,6 +208,7 @@ nav {
   .header__menu {
     width: 100%;
     justify-content: space-between;
+    z-index: 20;
   }
   
   .checkbtn {
@@ -181,7 +223,7 @@ nav {
     position: fixed;
     width: 100%;
     height: 40vh;
-    background-color: rgba(255, 255, 255, 0.575);
+    background-color: rgb(255, 255, 255);
     left: 0;
     top: -100%;
     text-align: center;
@@ -201,6 +243,7 @@ nav {
     height: 100%;
     position: relative;
     top: 6rem;
+    z-index: 0;
   }
 
   .header__slider-box img {
@@ -215,6 +258,30 @@ nav {
     border: none;
     font-weight: 500;
   }
+  .frase {
+    height: 100%;
+    gap: 20px;
+  }
+  
+  .frase p:first-child {
+    width: 100%;
+    font-size: 2.2rem;
+    margin-top: 140px;
+  }
+  
+  .frase p:nth-child(2) {
+    width: 600px;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  
+  .frase a {
+    height: 50px;
+    width: 120px;
+    font-size: 1rem;
+    margin-top: 50px;
+    border-radius: 20px;
+  }  
 
   /* Footer */
 
@@ -252,6 +319,7 @@ nav {
   .header__menu {
     width: 100%;
     justify-content: space-between;
+    z-index: 20;
   }
   
   .checkbtn {
@@ -266,7 +334,7 @@ nav {
     position: fixed;
     width: 100%;
     height: 40vh;
-    background-color: rgba(255, 255, 255, 0.575);
+    background-color: rgb(255, 255, 255);
     left: 0;
     top: -100%;
     text-align: center;
@@ -286,6 +354,7 @@ nav {
     height: 100%;
     position: relative;
     top: 6rem;
+    z-index: 0;
   }
 
   .header__slider-box img {
@@ -300,6 +369,32 @@ nav {
     border: none;
     font-weight: 500;
   }
+
+  .frase {
+    height: 265px;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .frase p:first-child {
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  
+  .frase p:nth-child(2) {
+    width: 100%;
+    font-size: .9rem;
+    margin-top: 0;
+  }
+  
+  .frase a {
+    height: 50px;
+    width: 120px;
+    font-size: 1rem;
+    margin-top: 0;
+    border-radius: 20px;
+  }  
 
   /* Footer */
 

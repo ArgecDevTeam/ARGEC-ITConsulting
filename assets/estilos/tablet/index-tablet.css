@@ -163,4 +163,12 @@
   .cliente__item {
     width: 320px;
   }
+
+  .clientes__contenedor {
+    align-items: center;
+  }
+
+  .clientes__contenedor h2 {
+    width: 700px;
+  }
 }

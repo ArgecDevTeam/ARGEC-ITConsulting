@@ -59,14 +59,14 @@
 
   .separador-img {
     width: 100%;
-    height: 430px;
+    height: 500px;
     border-radius: 0;
   }
 
   .separador-contenedor {
     flex-direction: column;
     width: 100%;
-    height: 440px;
+    height: 500px;
   }
 
   .imagen {
@@ -76,7 +76,7 @@
 
   .separador-frase {
     width: 100%;
-    height: 284px;
+    height: 430px;
     padding: 0 10px;
   }
 
@@ -92,16 +92,19 @@
 
   .trabajo__contenedor {
     height: auto;
-    margin: 0 0 100px 0;
-    gap: 0;
+    margin: 20px 0 100px 0;
+    gap: 20px;
   }
 
   .trabajo__tarjeta {
-    width: 330px;
+    width: 300px;
+    height: 380px;
+    justify-content: center;
   }
 
   .trabajo__tarjeta-info {
     width: 100%;
+    height: auto;
   }
 
   .trabajo__tarjeta-info p {
@@ -168,12 +171,16 @@
   /* Seccion clientesl */
 
   .clientes {
-    height: 65vh;
+    height: 75vh;
   }
 
   .clientes__imagen {
     align-items: start;
     background-position: -110px;
+  }
+
+  .clientes__contenedor {
+    padding-top: 10px;
   }
 
   .clientes__items {
