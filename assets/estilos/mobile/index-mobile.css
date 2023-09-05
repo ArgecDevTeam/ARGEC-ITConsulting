@@ -4,7 +4,7 @@
   /* Seccion tarjeta */
   
   .tarjeta {
-    margin: 0;
+    margin: 0 0 60px 0;
     padding: 0 0;
     height: 52vh;
   }
@@ -78,6 +78,7 @@
     width: 100%;
     height: 410px;
     padding: 0 10px;
+    text-align: center;
   }
 
   /* Seccion nuestra forma de trabajar */
@@ -88,6 +89,7 @@
 
   .titulo__trabajo {
     text-align: center;
+    margin-top: 26px;
   }
 
   .trabajo__contenedor {
@@ -139,6 +141,7 @@
 
   .argec__contenedor-items {
     width: 100%;
+    margin-bottom: 60px;
   }
 
   .argec__item {

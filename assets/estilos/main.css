@@ -19,7 +19,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  opacity: .8;
+  opacity: .5;
   z-index: 100;
 }
 
@@ -56,7 +56,7 @@
 
 .header__menu {
   position: absolute;
-  height: 6rem;
+  height: 96px;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -68,7 +68,6 @@
 .frase {
   position: absolute;
   top: 6rem;
-  background-color: rgba(255, 255, 255, 0.575);
   height: 518px;
   width: 100%;
   display: flex;
@@ -258,6 +257,7 @@ nav {
     border: none;
     font-weight: 500;
   }
+
   .frase {
     height: 100%;
     gap: 20px;
@@ -311,9 +311,10 @@ nav {
 
 /* Mobile */
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     height: 42.5vh;
+    margin-bottom: 110px;
   }
 
   .header__menu {
@@ -371,7 +372,7 @@ nav {
   }
 
   .frase {
-    height: 280px;
+    max-height: 260px;
     justify-content: center;
     gap: 20px;
   }
