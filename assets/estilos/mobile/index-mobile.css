@@ -4,9 +4,10 @@
   /* Seccion tarjeta */
   
   .tarjeta {
-    margin: 0 0 60px 0;
-    padding: 0 0;
-    height: 52vh;
+    margin: 0;
+    padding: 100px 0;
+    /* height: 52vh; */
+    height: auto;
   }
 
   .tarjeta__contenedor {

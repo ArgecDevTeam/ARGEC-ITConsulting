@@ -3,8 +3,8 @@
   
   .tarjeta {
     margin: 0;
-    padding: 0 0;
-    height: 52vh;
+    padding: 100px 0;
+    height: auto;
   }
 
   .tarjeta__contenedor {
@@ -46,9 +46,10 @@
   /* Separador */
   
   .separador {
-    height: 32vh;
-    padding: 0;
-    top: 0;
+    height: auto;
+    padding: 100px 0;
+    /* top: 0; */
+    position: static;
     align-items: center;
   }
 
@@ -153,7 +154,7 @@
   /* Seccion clientes */
 
   .clientes {
-    height: 35vh;
+    height: auto;
   }
 
   .clientes__items {
@@ -166,6 +167,7 @@
 
   .clientes__contenedor {
     align-items: center;
+    padding: 40px 0;
   }
 
   .clientes__contenedor h2 {
