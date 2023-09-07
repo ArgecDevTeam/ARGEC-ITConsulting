@@ -392,9 +392,10 @@
 }
 
 .argec__contenedor-imagen {
-  width: 50%;
+  width: 550px;
   display: flex;
   flex-direction: column;
+  
 }
 
 .argec__contenedor-imagen img {

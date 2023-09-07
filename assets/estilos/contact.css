@@ -1,3 +1,35 @@
+/* Header */
+
+.header {
+  height: 70vh;
+}
+
+.header__menu {
+  position: static;
+}
+
+.header__titulo {
+  height: calc(100% - 6rem);
+  background-image: url(../img/patron1.jpg);
+}
+
+.header__fondo {
+  background-color: #901affee;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 0 0;
+}
+
+.header__fondo h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+/* Seccion Formulario de contacto */
+
 .formulario {
   width: 100%;
   display: flex;

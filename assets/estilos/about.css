@@ -1,3 +1,35 @@
+/* Header */
+
+.header {
+  height: 70vh;
+}
+
+.header__menu {
+  position: static;
+}
+
+.header__titulo {
+  height: calc(100% - 6rem);
+  background-image: url(../img/patron1.jpg);
+}
+
+.header__fondo {
+  background-color: #1a6affee;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 0 0;
+}
+
+.header__fondo h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+/* Seccion Acerca nuestro */
+
 .about {
   width: 100%;
   display: flex;
@@ -23,10 +55,14 @@
   justify-content: center;
   align-items: center;
   margin: 30px 0;
+  width: 100%;
+  background: rgb(2,72,172);
+  background: linear-gradient(180deg, rgba(2,72,172,1) 14%, rgba(255,255,255,1) 64%);
+  padding: 20px 0 0 0;
 }
 
 .about__fundador h4 {
-  color: #0248AC;
+  color: #fff;
   font-size: 1.8rem;
   font-weight: 500;
 }
