@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/No-background2.webp" type="image/x-icon">
+  <title>ARGEC - IT Consulting</title>
+  <link rel="stylesheet" href="./assets/estilos/login.css">
+</head>
+<body>
+  <section class="login">
+    <div class="imagen">
+      <img src="./assets/img/argec-header-no-background.webp" alt="" width="100%">
+    </div>
+    <div class="login__contenedor">
+      <form>
+        <h1>Login</h1>
+        <input type="text" name="usuario" placeholder="Usuario">
+        <input type="password" name="password" placeholder="Contraseña">
+        <button type="submit">Iniciar Sesion</button>
+      </form>
+    </div>
+  </section>
+  <script>
+    const formulario = document.querySelector('form');
+    formulario.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const usuario = document.querySelector('input[name="usuario"]').value;
+      const password = document.querySelector('input[name="password"]').value;
+      
+      // function escapeHtml(input) {
+      //   return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      // }
+
+
+      if (usuario === 'admin' && password === 'Gonzalo') {
+        window.location.href = './blog.html';
+      }
+      if (usuario !== 'admin' && password !== 'Gonzalo' || usuario === 'admin' && password !== 'Gonzalo' || usuario !== 'admin' && password === 'Gonzalo'){
+        window.location.href = './index.html';
+      }
+    })
+  </script>
+</body>
+</html>
