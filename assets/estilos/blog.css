@@ -58,6 +58,7 @@
 
 .blog__tarjeta:hover {
   transform: scale(1.05);
+  border: 1px #ff891a solid;
 }
 
 .blog__imagen {
@@ -122,6 +123,6 @@
 }
 
 .blog__boton button:hover {
-  background-color: #598ef0e3;
-  color: #d4d4d4;
+  background-color: #ff891a;
+  color: #ffffff;
 }

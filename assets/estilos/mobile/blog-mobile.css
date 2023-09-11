@@ -1,0 +1,53 @@
+@media screen and (max-width: 767px) {
+  .header {
+    height: auto;
+  }
+  
+  .header__menu {
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .header__titulo {
+    height: 200px;
+    margin-top: calc(200px - 6rem);
+    background-image: url(../img/patron1.jpg);
+  }
+  
+  .header__fondo {
+    align-items: center;
+    padding: 0;
+  }
+  
+  /* Seccion blog */
+  
+  .blog {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    flex-direction: column;
+  }
+  
+  .blog__contenedor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Diseño de las tarjetas del blog */
+  
+  .blog__tarjeta {
+    height: 350px;
+    width: 320px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    border: 1px #1455cec2 solid;
+  }
+  
+  
+}

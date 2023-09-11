@@ -43,7 +43,8 @@
         Los campos con <span>*</span> son obligatorios
       </div>
       <div class="form">
-        <form id="contact-form">
+        <form id="contact-form" action="https://formsubmit.io/send/43985208-70c5-4455-9568-e5c30b3fe08a" method="post">
+          <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5501/contact.html">
           <div class="contenedor__input">
             <div class ="formulario__input">
               <label for="from_name">Nombre <span>*</span></label>
@@ -58,6 +59,7 @@
               <textarea type="text" name="message" id="message" required></textarea>
             </div>
           </div>
+          <input name="_formsubmit_id" type="text" style="display:none">
           <button type="submit" class="formulario__boton" >Enviar</button>
         </form>
         <div class="imagen">
@@ -87,7 +89,7 @@
 
   <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     (function() {
       emailjs.init('b3VeSOQeiCy1asiDJ');
     })();
@@ -104,7 +106,7 @@
           });
       });
     }
-  </script>
+  </script> -->
 </body>
 </html>
 
