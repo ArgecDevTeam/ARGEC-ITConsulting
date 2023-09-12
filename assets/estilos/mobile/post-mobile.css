@@ -1,0 +1,49 @@
+
+@media screen and (max-width: 767px) {
+.volver {
+  display: none;
+}
+
+
+.post {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post__imagen {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.epigrafe span {
+  font-size: 12px;
+}
+
+.post__contenido {
+  width: 100%;
+  text-wrap: wrap;
+}
+
+.post__contenido h5 {
+  margin: 22px 0 8px 0;
+}
+
+.post__contenido p {
+  margin: 10px 0;
+}
+
+aside {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 100px;
+}
+
+.card:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.04);
+}
+
+}
