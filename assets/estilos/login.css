@@ -25,7 +25,7 @@ body {
 
 .imagen {
   width: 350px;
-  margin: 15px auto;
+  margin: 15px auto 0 auto;
 }
 
 .login__contenedor {
@@ -33,6 +33,11 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  flex-direction: column;
+}
+
+.login__contenedor h1 {
+  margin: 0 0 20px 0;
 }
 
 .login__contenedor form {
