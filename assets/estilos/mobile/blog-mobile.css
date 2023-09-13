@@ -11,7 +11,7 @@
   .header__titulo {
     height: 200px;
     margin-top: calc(200px - 6rem);
-    background-image: url(../img/patron1.jpg);
+    background-image: url(../../img/patron1.jpg);
   }
   
   .header__fondo {
