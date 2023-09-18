@@ -1,0 +1,130 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario__titulo {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #123412;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+/* Estilos para los inputs */
+
+form {
+  width: 1000px;
+  display: flex;
+  background-color: #ff891aee;
+  border-radius: 40px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.lado-1 {
+  width: 25%;
+  padding: 10px;
+}
+
+.lado-2 {
+  width: 75%;
+  padding: 10px;
+}
+
+.lado-3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 12px 0;
+}
+
+label {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+input, textarea{
+  border: 2px #1455ce solid;  
+  outline: none;
+  height: 30px;
+  padding: 10px;
+  border-radius: 14px;
+  font-size: 16px;
+}
+
+
+#txtID {
+  width: 50px;
+  text-align: center;
+}
+
+#contenido {
+  height: 220px;
+  resize: none;
+  overflow-y: scroll;
+}
+
+#contenido::-webkit-scrollbar {
+  display: none;
+}
+
+#resumen {
+  height: 82px;
+  resize: none;
+}
+
+/* Botones */
+
+.editar__botones {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 20px;
+  padding-right: 30px;
+  height: 40px;
+}
+
+.btn-editar {
+  width: 120px;
+  height: 100%;
+  background-color: #1455ce;
+  color: #fff;
+  font-size: 18px;
+  padding: 0;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-editar:hover {
+  background-color: #487cdb;
+}
+
+.btn-cancelar {
+  width: 120px;
+  height: 100%;
+  background-color: red;
+  color: #fff;
+  font-size: 18px;
+  padding: 0;
+  font-weight: 700;
+  border-radius: 14px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-cancelar:hover {
+  background-color: rgb(114, 0, 0);
+}

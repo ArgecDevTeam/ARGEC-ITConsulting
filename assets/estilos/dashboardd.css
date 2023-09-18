@@ -10,7 +10,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header__dashboard-titulo a {
+  text-decoration: none;
   color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .header__dashboard-logout {
@@ -31,6 +37,7 @@
   align-items: center;
   height: 100%;
   gap: 4px;
+  border: none;
 }
 
 .header__dashboard-logout a i {
@@ -40,108 +47,33 @@
 /* Dashboard */
 
 .dashboard {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.dashboard h2 {
-  font-size: 2.2rem;
-  color: #d38a03;
-  margin: 20px 0;
-}
-
-.dashboard__publicaciones {
-  width: 900px;
-}
-
-/* Tarjetas de las publicaciones */
-
-.blog__tarjeta {
-  width: 100%;
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  position: relative;
-  margin: 20px 0;
-  border: 1px #1455ce solid;
-  border-radius: 20px;
+  padding: 4rem 0;
 }
 
-.blog__imagen {
-  height: 100%;
+.table {
+  border: 1px blue solid;
+  border-collapse: collapse;
+  width: 1000px;
 }
 
-.blog__imagen img {
-  border-radius: 20px 0 0 20px;
-}
-
-.paste-button {
-  position: absolute;
-  display: block;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  top: 0;
-  right: 0;
-}
-
-.button {
-  background: none;
-  color: #212121;
-  padding: 10px 15px;
-  font-size: 15px;
-  font-weight: bold;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  font-size: 13px;
-  position: absolute;
-  z-index: 1;
-  min-width: 200px;
-  background-color: #1455ce;
-  border-radius: 0px 15px 15px 15px;
-  overflow: hidden;
-}
-
-.dropdown-content a {
+th {
+  border: 1px black solid;
+  height: 40px;
+  background-color: chocolate;
   color: #fff;
-  padding: 8px 10px;
+}
+
+td {
+  border: 1px black solid;
+  text-align: center;
+  height: 35px;
+}
+
+td a {
   text-decoration: none;
-  display: block;
-  transition: 0.1s;
+  color: #000;
+  margin: 0 2px;
 }
-
-.dropdown-content a i {
-  margin-right: 10px;
-}
-
-.dropdown-content a:hover {
-  background-color: #d38a03;
-  color: #fff;
-}
-
-.dropdown-content #top:hover {
-  border-radius: 0px 13px 0px 0px;
-}
-
-.dropdown-content #bottom:hover {
-  border-radius: 0px 0px 13px 13px;
-}
-
-.paste-button:hover button {
-  border-radius: 15px 15px 0px 0px;
-}
-
-.paste-button:hover .dropdown-content {
-  display: block;
-  top: 22px;
-  left: 29px;
-}
-
