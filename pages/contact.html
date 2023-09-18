@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/img/No-background2.webp" type="image/x-icon">
+  <title>ARGEC - IT Consulting</title>
+  <link rel="stylesheet" href="../assets/estilos/main.css">
+  <link rel="stylesheet" href="../assets/estilos/contact.css">
+  <link rel="stylesheet" href="../assets/estilos/mobile/contact-mobile.css">
+  <link rel="stylesheet" href="../assets/estilos/tablet/contact-tablet.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__menu">
+      <img src="../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo">
+
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="header__menu-items">
+          <li class="header__menu-links"><a href="../index.html">Inicio</a></li>
+          <li class="header__menu-links"><a href="./about.html">Acerca Nuestro</a></li>
+          <li class="header__menu-links"><a href="./blog.html">Blog</a></li>
+          <li class="header__menu-links header__menu-links--active"><a href="./contact.html">Contáctenos</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="header__titulo">
+      <div class="header__fondo">
+        <h1>Contáctenos</h1>
+      </div>
+    </div>
+  </header>
+
+  <section class="formulario">
+    <div class="formulario__contenedor">
+      <div class="formulario__texto">
+        Los campos con <span>*</span> son obligatorios
+      </div>
+      <div class="form">
+        <form id="contact-form" action="https://formsubmit.io/send/43985208-70c5-4455-9568-e5c30b3fe08a" method="post">
+          <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5501/pages/contact.html">
+          <div class="contenedor__input">
+            <div class ="formulario__input">
+              <label for="from_name">Nombre <span>*</span></label>
+              <input type="text" name="from_name" id="from_name" required>
+            </div>
+            <div class ="formulario__input">
+              <label for="email">E-mail <span>*</span></label>
+              <input type="text" name="email" id="email" required>
+            </div>
+            <div class ="formulario__input">
+              <label for="message">Mensaje <span>*</span></label>
+              <textarea type="text" name="message" id="message" required></textarea>
+            </div>
+          </div>
+          <input name="_formsubmit_id" type="text" style="display:none">
+          <button type="submit" class="formulario__boton" >Enviar</button>
+        </form>
+        <div class="imagen">
+          <img src="../assets/img/contacto-2.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
+    <div class="footer__redes">
+      <a href="https://www.linkedin.com/company/argec-itconsulting/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/argec_itconsulting/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/argecitconsulting/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="mailto:contacto@argec.net" target="_blank" rel="noopener noreferrer">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- <script type="text/javascript">
+    (function() {
+      emailjs.init('b3VeSOQeiCy1asiDJ');
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+          emailjs.sendForm('service_aj42lim', 'template_iztg334', this)
+          .then(function() {
+            console.log('SUCCESS!');
+          }, function(error) {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script> -->
+</body>
+</html>
+
+
+
