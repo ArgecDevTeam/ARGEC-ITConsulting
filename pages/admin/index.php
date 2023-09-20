@@ -5,6 +5,17 @@
     // Borrar registros con el ID correspondiente
     $txtID = (isset($_GET['txtID']) )?$_GET['txtID']:"";
 
+    $sentencia = $conexion->prepare("SELECT nom_imagen FROM publicaciones WHERE ID = :ID");
+    $sentencia->bindParam(':ID',$txtID);
+    $sentencia->execute();
+    $registro_imagen = $sentencia->fetch(PDO::FETCH_LAZY);
+
+    if(isset($registro_imagen['nom_imagen'])){
+      if (file_exists('../../assets/img/post-img/'.$registro_imagen['nom_imagen'])){
+        unlink('../../assets/img/post-img/'.$registro_imagen['nom_imagen']);
+      }
+    }
+
     $sentencia = $conexion->prepare("DELETE FROM publicaciones WHERE ID = :ID");
     $sentencia->bindParam(':ID',$txtID);
     $sentencia->execute();
@@ -12,11 +23,8 @@
 
   // Seleccionar registros
   $sentencia = $conexion->prepare("SELECT * FROM `publicaciones`");
-  //  $ruta_imagen = $carpeta_destino . $nombre_archivo;
-
   $sentencia->execute();
   $listaPost = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-  // print_r($listaPost)
 
   session_start();
   if (!isset($_SESSION['usuario'])){
@@ -43,7 +51,7 @@
       <a href="./index.php">Dashboard - ARGEC</a>
     </div>
     <div class="header__dashboard-logout">
-      <a href="../post/form.php"><i class="fa-solid fa-plus"></i>Agregar</a>
+      <a href="./agregar.php"><i class="fa-solid fa-plus"></i>Agregar</a>
       <a href="../../php/cerrar.php"><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
   </header>
@@ -63,11 +71,10 @@
       <tbody>
         
         <?php foreach ($listaPost as $publicacion) { ?>
-          <?php $nombreImagen = $publicacion['nom_imagen'];?>
           <tr>
             <td><?php echo $publicacion['ID'];?></td>
             <td><?php echo $publicacion['titulo'];?></td>
-            <td><?php echo '<img src="./mostrar_imagen.php?nombre=$nombreImagen"/>';?></td>
+            <td><img src="../../assets/img/post-img/<?php echo $publicacion['nom_imagen']?>" width="50px" alt=""></td>
             <td><?php echo $publicacion['fecha'];?></td>
             <td><?php echo $publicacion['hora']?></td>
             <td>

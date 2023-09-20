@@ -4,45 +4,34 @@
   if ($_POST) {
 
     $titulo = (isset($_POST['titulo']))?$_POST['titulo']:"";
-    $nombreArchivo = $_FILES["imagen"]["name"];
-    $tipoArchivo = $_FILES["imagen"]["type"];
-    $tamañoArchivo = $_FILES["imagen"]["size"];
-    $tempArchivo = $_FILES["imagen"]["tmp_name"];
+    $nombreArchivo = (isset($_FILES["imagen"]["name"])) ?$_FILES["imagen"]["name"]:"";
     $epigrafe = (isset($_POST['epigrafe']))?$_POST['epigrafe']:"";
     $fecha = (isset($_POST['fecha']))?$_POST['fecha']:"";
     $hora = (isset($_POST['hora']))?$_POST['hora']:"";
     $contenido = (isset($_POST['contenido']))?$_POST['contenido']:"";
     $resumen = (isset($_POST['resumen']))?$_POST['resumen']:"";
-    $carpetaDestino = "../../assets/img/post-img";
 
-    $allowedTypes = array("image/jpeg", "image/png", "image/gif", "image/webp");
-    if(!in_array($tipoArchivo, $allowedTypes)) {
-      print_r("Error: Solo se permiten archivos de imagen (JPEG, PNG, GIF, WEBP).");
+    $nom_archivo_imagen = ($nombreArchivo!="")? "_".$nombreArchivo:"";
+
+    $tmp_imagen = $_FILES["imagen"]["tmp_name"];
+    if($tmp_imagen!=""){
+      move_uploaded_file($tmp_imagen,"../../assets/img/post-img/".$nom_archivo_imagen);
+    }
+
+    $sentencia = $conexion->prepare("INSERT INTO `publicaciones` (`ID`, `titulo`, `nom_imagen`, `epigrafe`, `fecha`, `hora`, `contenido`, `resumen`) VALUES (NULL, :titulo, :nom_imagen, :epigrafe, :fecha, :hora, :contenido, :resumen);");
+
+    $sentencia->bindParam(":titulo", $titulo);        
+    $sentencia->bindParam(":nom_imagen", $nom_archivo_imagen);
+    $sentencia->bindParam(":epigrafe", $epigrafe);
+    $sentencia->bindParam(":fecha", $fecha);
+    $sentencia->bindParam(":hora", $hora);
+    $sentencia->bindParam(":contenido", $contenido);
+    $sentencia->bindParam(":resumen", $resumen);
+    if($sentencia->execute()) {  
+      $mensaje = "Registro agregado con exito";
+      header("Location:index.php?mensaje=$mensaje");
     } else {
-      $datosImagen = file_get_contents($tempArchivo);
-      if(move_uploaded_file($tempArchivo, $carpetaDestino . $nombreArchivo)) {
-        echo "Imagen subida exitosamente.";
-      } else {
-        echo "Error al subir la imagen.";
-      }
-
-      $sentencia = $conexion->prepare("INSERT INTO `publicaciones` (`ID`, `titulo`, `nom_imagen`, `tipo_imagen`, `datos_imagen`, `epigrafe`, `fecha`, `hora`, `contenido`, `resumen`) VALUES (NULL, :titulo, :nom_imagen, :tipo_imagen, :datos_imagen, :epigrafe, :fecha, :hora, :contenido, :resumen);");
-
-      $sentencia->bindParam(":titulo", $titulo);        
-      $sentencia->bindParam(":nom_imagen", $nombreArchivo);
-      $sentencia->bindParam(":tipo_imagen", $tipoArchivo);
-      $sentencia->bindParam(":datos_imagen", $datosImagen, PDO::PARAM_LOB);
-      $sentencia->bindParam(":epigrafe", $epigrafe);
-      $sentencia->bindParam(":fecha", $fecha);
-      $sentencia->bindParam(":hora", $hora);
-      $sentencia->bindParam(":contenido", $contenido);
-      $sentencia->bindParam(":resumen", $resumen);
-      if($sentencia->execute()) {  
-        $mensaje = "Registro agregado con exito";
-        header("Location:form.php?mensaje=$mensaje");
-      } else {
-        echo "Error al crear y guardar el post en la base de datos.";
-      }
+      echo "Error al crear y guardar el post en la base de datos.";
     }
   }
 
@@ -62,7 +51,7 @@
 <body>
   <header class="header__dashboard">
     <div class="header__dashboard-titulo">
-      <a href="../admin/index.php" style="margin-left: 40px;">Volver</a>
+      <a href="./index.php" style="margin-left: 40px;">Volver</a>
     </div>
   </header>
 
@@ -102,11 +91,11 @@
         </div>
         <div class="input-group">
           <label for="resumen">Resumen</label>
-          <textarea type="text" name="resumen" id="resumen" maxlength="150"></textarea>
+          <textarea type="text" name="resumen" id="resumen" maxlength="180"></textarea>
         </div>
         <div class="editar__botones">
           <input type="submit" value="Enviar" class="btn-editar">
-          <a href="../admin/index.php" class="btn-cancelar">Cancelar</a>
+          <a href="./index.php" class="btn-cancelar">Cancelar</a>
         </div>
       </div>
     </form>

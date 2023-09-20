@@ -8,10 +8,10 @@
     $sentencia = $conexion->prepare("SELECT * FROM `publicaciones` WHERE ID= :ID");
     $sentencia->bindParam(':ID',$txtID);
     $sentencia->execute();
-    $lista  = $sentencia->fetch(PDO::FETCH_LAZY);
+    $lista = $sentencia->fetch(PDO::FETCH_LAZY);
 
-    $titulo = $lista['titulo'];
-    $imagen = $lista['imagen'];
+    $titulo = $lista['titulo'];    
+    $nombreArchivo = $lista["nom_imagen"];
     $epigrafe = $lista['epigrafe'];
     $fecha = $lista['fecha'];
     $hora = $lista['hora'];
@@ -24,7 +24,6 @@
 
     $txtID = (isset($_POST['txtID']))?$_POST['txtID']:"";
     $titulo = (isset($_POST['titulo']))?$_POST['titulo']:"";
-    $imagen = (isset($_POST['imagen']))?$_POST['imagen']:"";
     $epigrafe = (isset($_POST['epigrafe']))?$_POST['epigrafe']:"";
     $fecha = (isset($_POST['fecha']))?$_POST['fecha']:"";
     $hora = (isset($_POST['hora']))?$_POST['hora']:"";
@@ -33,8 +32,7 @@
 
     $sentencia = $conexion->prepare("UPDATE `publicaciones` 
     SET 
-    titulo=:titulo, 
-    imagen=:imagen,
+    titulo=:titulo,
     epigrafe=:epigrafe,
     fecha=:fecha,
     hora=:hora,
@@ -42,7 +40,6 @@
     resumen=:resumen WHERE ID= :ID;");
 
     $sentencia->bindParam(":titulo", $titulo);
-    $sentencia->bindParam(":imagen", $imagen);
     $sentencia->bindParam(":epigrafe", $epigrafe);
     $sentencia->bindParam(":fecha", $fecha);
     $sentencia->bindParam(":hora", $hora);
@@ -50,6 +47,37 @@
     $sentencia->bindParam(":resumen", $resumen);
     $sentencia->bindParam(":ID", $txtID);
     $sentencia->execute();
+
+    if ($_FILES['imagen']['name']!=""){
+      
+      $nombreArchivo = (isset($_FILES["imagen"]["name"])) ?$_FILES["imagen"]["name"]:"";
+      $fechaImagen = new DateTime();
+      $nom_archivo_imagen = ($nombreArchivo!="")?$fechaImagen->getTimestamp()."_".$nombreArchivo:"";
+
+      $tmp_imagen = $_FILES["imagen"]["tmp_name"];
+
+      move_uploaded_file($tmp_imagen,"../../assets/img/post-img/".$nom_archivo_imagen);
+      
+      // Borrado del archivo anterior 
+
+      $sentencia = $conexion->prepare("SELECT nom_imagen FROM publicaciones WHERE ID = :ID");
+      $sentencia->bindParam(':ID',$txtID);
+      $sentencia->execute();
+      $registro_imagen = $sentencia->fetch(PDO::FETCH_LAZY);
+  
+      if(isset($registro_imagen['nom_imagen'])){
+        if (file_exists('../../assets/img/post-img/'.$registro_imagen['nom_imagen'])){
+          unlink('../../assets/img/post-img/'.$registro_imagen['nom_imagen']);
+        }
+      }
+
+      $sentencia = $conexion->prepare("UPDATE `publicaciones` 
+      SET nom_imagen=:nom_imagen WHERE ID= :ID;");
+
+      $sentencia->bindParam(":nom_imagen", $nom_archivo_imagen);
+      $sentencia->bindParam(":ID", $txtID);
+      $sentencia->execute();
+    }
 
     $mensaje = "Registro modificado con exito";
     header("Location:index.php?mensaje=$mensaje");
@@ -83,8 +111,8 @@
       <div class="lado-1">  
         <div class="input-group">
           <label for="imagen">Imagen</label>
-          <input value="<?php echo $imagen;?>" 
-            type="file" name="imagen" id="imagen">
+          <img src="../../assets/img/post-img/<?php echo $nombreArchivo?>" alt="<?php echo $titulo;?>">
+          <input type="file" name="imagen" id="imagen">
         </div>
       </div>
       <div class="lado-2">
