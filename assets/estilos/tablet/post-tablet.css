@@ -1,10 +1,10 @@
-@media screen and (max-width: 767px) {
-  .header__fondo {
-    padding: 140px 14px 30px 14px;
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .header__menu {
+    position: fixed;
   }
 
-  .header__fondo h1 {
-    font-size: 3rem;
+  .header__fondo {
+    padding: 140px 44px 30px 44px;
   }
 
   .volver {
@@ -18,17 +18,21 @@
   }
 
   .post__imagen {
-    width: 100%;
-    margin-bottom: 50px;
+    width: 700px;
+    margin: 50px auto;
   }
 
   .epigrafe span {
     font-size: 12px;
+    font-weight: 500;
   }
 
   .post__contenido {
-    width: 100%;
+    width: 720px;
+    margin: auto;
     text-wrap: wrap;
+    font-size: 18px;
+    font-weight: 500;
   }
 
   .post__contenido h5 {
@@ -41,26 +45,37 @@
 
   aside {
     margin: 40px 0;
-    display: flex;
-    flex-direction: column-reverse;
     gap: 100px;
+  }
+
+  .buscador {
+    width: 700px;
+    margin: 22px auto;
   }
 
   .post__ultimos h4 {
     text-align: center;
+    font-size: 34px;
   }
 
   .card {
-    width: 100%;
+    width: 680px;
+    height: 120px;
+    margin: auto;
   }
 
   .first-content {
     justify-content: space-between;
   }
 
+  .first-content img {
+    width: 200px;
+  }
+
   .first-content p {
-    width: 240px;
+    width: 440px;
     margin-right: 10px;
+    font-size: 22px;
   }
 
   .card:hover {

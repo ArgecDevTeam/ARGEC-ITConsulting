@@ -26,35 +26,6 @@
   font-size: 5rem;
 }
 
-/* Boton publicar */
-
-.btn__publicar {
-  position: absolute;
-  top: 40px;
-  right: 80px;
-  height: 50px;
-  width: 120px;
-}
-
-.btn__publicar a {
-  background-color: #1455cec2;
-  border: none;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn__publicar a:hover {
-  background-color: #ff891a;
-}
-
 /* Seccion blog */
 
 .blog {
@@ -89,6 +60,10 @@
 .blog__tarjeta:hover {
   transform: scale(1.05);
   border: 1px #ff891a solid;
+}
+
+.blog__tarjeta:hover .blog__botones {
+  background-color: #ff891a;
 }
 
 .blog__imagen {
@@ -137,6 +112,7 @@
 /* Boton cargar mas */
 
 .blog__boton {
+  display: none;
   margin-top: 50px;
 }
 
