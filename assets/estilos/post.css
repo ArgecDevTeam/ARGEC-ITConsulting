@@ -27,34 +27,6 @@
   text-align: center;
 }
 
-/* Boton de editar */
-
-.btn-editar {
-  position: absolute;
-  top: 100px;
-  right: 260px;
-  height: 50px;
-  width: 100px;
-}
-
-.btn-editar a {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ff891a;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 20px;
-}
-
-.btn-editar a:hover {
-  background-color: #1455cec2;
-}
-
 .volver {
   width: 100px;
   height: 40px;
@@ -89,6 +61,10 @@
   position: relative;
 }
 
+.posteos { 
+  width: 70%;
+}
+
 .post__imagen {
   width: 720px;
   height: 450px;
@@ -118,7 +94,8 @@
 }
 
 aside {
-  margin: 10rem 11rem;
+  width: 30%;
+  margin: 8rem 0;
 }
 
 .buscador {
@@ -161,9 +138,14 @@ input {
   font-size: 20px;
 }
 
+.post__ultimos-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .card {
-  width: 290px;
-  height: 80px;
+  width: 360px;
+  height: 100px;
   transition: all 0.4s;
   border-radius: 10px;
   font-size: 30px;
@@ -193,13 +175,14 @@ input {
 }
 
 .first-content img {
-  width: 120px;
+  width: 140px;
   height: 100%;
 }
 
 .first-content p {
-  width: 170px;
+  width: 220px;
   height: 100%;
+  padding: 0 10px;
   font-size: 1rem;
   display: flex;
   align-items: center;

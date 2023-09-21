@@ -86,12 +86,14 @@
       <div class="post__ultimos">
         <h4>Ultimos Posteos</h4>
         <?php foreach ($listaPost as $publicacion) { ?>
-          <a href="./post.php?txtID=<?php echo $publicacion['ID'];?>" class="card">
-            <div class="first-content">
-              <img src="../assets/img/post-img/<?php echo $publicacion['nom_imagen'];?>" alt="<?php echo $publicacion['titulo']?>">
-              <p><?php echo $publicacion['titulo']?></p>
-            </div>
-          </a>
+          <div class="post__ultimos-container">
+            <a href="./post.php?txtID=<?php echo $publicacion['ID'];?>" class="card">
+              <div class="first-content">
+                <img src="../assets/img/post-img/<?php echo $publicacion['nom_imagen'];?>" alt="<?php echo $publicacion['titulo']?>">
+                <p><?php echo $publicacion['titulo']?></p>
+              </div>
+            </a>
+          </div>
         <?php }?>
       </div>
     </aside>
