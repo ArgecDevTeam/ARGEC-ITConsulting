@@ -2,27 +2,25 @@
   include('../../php/bd.php');
   
   if ($_POST) {
-
     $titulo = (isset($_POST['titulo']))?$_POST['titulo']:"";
     $nombreArchivo = (isset($_FILES["imagen"]["name"])) ?$_FILES["imagen"]["name"]:"";
-    $epigrafe = (isset($_POST['epigrafe']))?$_POST['epigrafe']:"";
     $fecha = (isset($_POST['fecha']))?$_POST['fecha']:"";
     $hora = (isset($_POST['hora']))?$_POST['hora']:"";
     $contenido = (isset($_POST['contenido']))?$_POST['contenido']:"";
     $resumen = (isset($_POST['resumen']))?$_POST['resumen']:"";
 
-    $nom_archivo_imagen = ($nombreArchivo!="")? "_".$nombreArchivo:"";
+    $fechaImagen = new DateTime();
+    $nom_archivo_imagen = ($nombreArchivo!="")?$fechaImagen->getTimestamp()."_".$nombreArchivo:"";
 
     $tmp_imagen = $_FILES["imagen"]["tmp_name"];
     if($tmp_imagen!=""){
       move_uploaded_file($tmp_imagen,"../../assets/img/post-img/".$nom_archivo_imagen);
     }
 
-    $sentencia = $conexion->prepare("INSERT INTO `publicaciones` (`ID`, `titulo`, `nom_imagen`, `epigrafe`, `fecha`, `hora`, `contenido`, `resumen`) VALUES (NULL, :titulo, :nom_imagen, :epigrafe, :fecha, :hora, :contenido, :resumen);");
+    $sentencia = $conexion->prepare("INSERT INTO `publicaciones` (`ID`, `titulo`, `nom_imagen`, `fecha`, `hora`, `contenido`, `resumen`) VALUES (NULL, :titulo, :nom_imagen, :fecha, :hora, :contenido, :resumen);");
 
     $sentencia->bindParam(":titulo", $titulo);        
     $sentencia->bindParam(":nom_imagen", $nom_archivo_imagen);
-    $sentencia->bindParam(":epigrafe", $epigrafe);
     $sentencia->bindParam(":fecha", $fecha);
     $sentencia->bindParam(":hora", $hora);
     $sentencia->bindParam(":contenido", $contenido);
@@ -34,7 +32,6 @@
       echo "Error al crear y guardar el post en la base de datos.";
     }
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +42,7 @@
   <link rel="shortcut icon" href="../../assets/img/No-background2.webp" type="image/x-icon">
   <title>Nueva Publicacion</title>
   <link rel="stylesheet" href="../../assets/estilos/main.css">
-  <link rel="stylesheet" href="../../assets/estilos/dashboardd.css">
+  <link rel="stylesheet" href="../../assets/estilos/dashboard.css">
   <link rel="stylesheet" href="../../assets/estilos/editar.css">
 </head>
 <body>
@@ -65,6 +62,8 @@
           <label for="imagen">Imagen</label>
           <input type="file" name="imagen" id="imagen">
         </div>
+      </div>
+      <div class="lado-3">
         <div class="input-group">
           <label for="fecha">Fecha</label>
           <input type="date" name="fecha" id="fecha">
@@ -75,15 +74,9 @@
         </div>
       </div>
       <div class="lado-2">
-        <div class="lado-3">
-        </div>
         <div class="input-group">
           <label for="titulo">Titulo</label>
           <input type="text" name="titulo" id="titulo" maxlength="50" required>
-        </div>
-        <div class="input-group">
-          <label for="epigrafe">Epigrafe</label>
-          <input type="text" name="epigrafe" id="epigrafe" maxlength="25">
         </div>
         <div class="input-group">
           <label for="contenido">Contendio</label>

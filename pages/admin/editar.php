@@ -2,7 +2,6 @@
   include('../../php/bd.php');
   
   if (isset($_GET['txtID'])){
-    
     $txtID = (isset($_GET['txtID']) )?$_GET['txtID']:"";
 
     $sentencia = $conexion->prepare("SELECT * FROM `publicaciones` WHERE ID= :ID");
@@ -12,19 +11,15 @@
 
     $titulo = $lista['titulo'];    
     $nombreArchivo = $lista["nom_imagen"];
-    $epigrafe = $lista['epigrafe'];
     $fecha = $lista['fecha'];
     $hora = $lista['hora'];
     $contenido = $lista["contenido"];
     $resumen = $lista['resumen'];  
-
   }
 
   if ($_POST) {
-
     $txtID = (isset($_POST['txtID']))?$_POST['txtID']:"";
     $titulo = (isset($_POST['titulo']))?$_POST['titulo']:"";
-    $epigrafe = (isset($_POST['epigrafe']))?$_POST['epigrafe']:"";
     $fecha = (isset($_POST['fecha']))?$_POST['fecha']:"";
     $hora = (isset($_POST['hora']))?$_POST['hora']:"";
     $contenido = (isset($_POST['contenido']))?$_POST['contenido']:"";
@@ -33,14 +28,12 @@
     $sentencia = $conexion->prepare("UPDATE `publicaciones` 
     SET 
     titulo=:titulo,
-    epigrafe=:epigrafe,
     fecha=:fecha,
     hora=:hora,
     contenido=:contenido,
     resumen=:resumen WHERE ID= :ID;");
 
     $sentencia->bindParam(":titulo", $titulo);
-    $sentencia->bindParam(":epigrafe", $epigrafe);
     $sentencia->bindParam(":fecha", $fecha);
     $sentencia->bindParam(":hora", $hora);
     $sentencia->bindParam(":contenido", $contenido);
@@ -48,18 +41,15 @@
     $sentencia->bindParam(":ID", $txtID);
     $sentencia->execute();
 
-    if ($_FILES['imagen']['name']!=""){
-      
+    if ($_FILES['imagen']['name']!=""){  
       $nombreArchivo = (isset($_FILES["imagen"]["name"])) ?$_FILES["imagen"]["name"]:"";
       $fechaImagen = new DateTime();
       $nom_archivo_imagen = ($nombreArchivo!="")?$fechaImagen->getTimestamp()."_".$nombreArchivo:"";
 
       $tmp_imagen = $_FILES["imagen"]["tmp_name"];
-
       move_uploaded_file($tmp_imagen,"../../assets/img/post-img/".$nom_archivo_imagen);
       
       // Borrado del archivo anterior 
-
       $sentencia = $conexion->prepare("SELECT nom_imagen FROM publicaciones WHERE ID = :ID");
       $sentencia->bindParam(':ID',$txtID);
       $sentencia->execute();
@@ -81,7 +71,6 @@
 
     $mensaje = "Registro modificado con exito";
     header("Location:index.php?mensaje=$mensaje");
-
   }
 ?>
 
@@ -93,7 +82,7 @@
   <link rel="shortcut icon" href="../../assets/img/No-background2.webp" type="image/x-icon">
   <title>Editar Publicacion</title>
   <link rel="stylesheet" href="../../assets/estilos/main.css">
-  <link rel="stylesheet" href="../../assets/estilos/dashboardd.css">
+  <link rel="stylesheet" href="../../assets/estilos/dashboard.css">
   <link rel="stylesheet" href="../../assets/estilos/editar.css">
 </head>
 <body>
@@ -135,10 +124,6 @@
         <div class="input-group">
           <label for="titulo">Titulo</label>
           <input value="<?php echo $titulo;?>" type="text" name="titulo" id="titulo" maxlength="50">
-        </div>
-        <div class="input-group">
-          <label for="epigrafe">Epigrafe</label>
-          <input value="<?php echo $epigrafe;?>" type="text" name="epigrafe" id="epigrafe" maxlength="25">
         </div>
         <div class="input-group">
           <label for="contenido">Contendio</label>

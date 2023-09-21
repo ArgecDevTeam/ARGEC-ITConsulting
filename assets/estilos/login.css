@@ -1,15 +1,29 @@
-#Login {
+body {
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.alerta {
+  position: absolute;
+  top: 100px;
+  background-color: rgb(245, 124, 124);
+  color: red;
+  height: 50px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .login {
   height: 350px;
   width: 400px;
-  background-color: rgb(240, 151, 34);
+  background-color: rgb(241, 148, 25);
   border-radius: 60px;
   color: #fff;
 }
@@ -56,16 +70,36 @@ input {
 }
 
 .login input::placeholder {
-  color: #1455cec2;
+  color: #1455ce;
 }
 
-.login button {
-  height: 35px;
-  width: 150px;
+.login .btn__login {
+  height: 45px;
+  width: 180px;
   background-color: #1455ce;
   border: none;
   color: #fff;
   border-radius: 20px;
   margin-top: 20px;
   cursor: pointer;
+}
+
+/* Tablet 
+
+@media screen and (min-width: 768px) and (max-width: 1023px){} */
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+  body {
+    flex-direction: column;
+  }
+  
+  .login {
+    width: 320px;
+  }
+  
+  .imagen {
+    width: 280px;
+  }
 }

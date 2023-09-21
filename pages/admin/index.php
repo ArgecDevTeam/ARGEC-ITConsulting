@@ -42,7 +42,7 @@
   <link rel="shortcut icon" href="../../assets/img/No-background2.ico" type="image/x-icon">
   <title>Dashboard - ARGEC</title>
   <link rel="stylesheet" href="../../assets/estilos/main.css">
-  <link rel="stylesheet" href="../../assets/estilos/dashboardd.css">
+  <link rel="stylesheet" href="../../assets/estilos/dashboard.css">
 </head>
 <body>
   <header class="header__dashboard">

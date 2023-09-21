@@ -2,7 +2,6 @@
   include('../php/bd.php');
     
   if (isset($_GET['txtID'])){
-    
     $txtID = (isset($_GET['txtID']) )?$_GET['txtID']:"";
 
     $sentencia = $conexion->prepare("SELECT * FROM `publicaciones` WHERE ID= :ID");
@@ -17,7 +16,6 @@
     $hora = $lista['hora'];
     $contenido = $lista["contenido"];
     $resumen = $lista['resumen'];  
-
   }
   
   $sentencia = $conexion->prepare("SELECT * FROM `publicaciones`");

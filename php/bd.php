@@ -3,7 +3,7 @@
 $servidor = 'localhost';
 $baseDeDatos = 'blog-argec';
 $usuario = 'root';
-$password = '';
+$password = '1234';
 
 try{
   

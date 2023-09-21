@@ -62,6 +62,9 @@ input, textarea{
   font-size: 16px;
 }
 
+#imagen {
+  border: none;
+}
 
 #txtID {
   width: 50px;
@@ -127,4 +130,123 @@ input, textarea{
 
 .btn-cancelar:hover {
   background-color: rgb(114, 0, 0);
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Estilos para los inputs */
+  
+  form {
+    width: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+  
+  .lado-1 {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .lado-2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .lado-3 {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  input, textarea{
+    height: 45px;
+  }
+
+  .lado-1 .input-group {
+    align-items: center;
+  }
+
+  .input-group img {
+    height: 300px;
+    width: 500px;
+  }
+
+  #contenido {
+    height: 420px;
+  }
+  
+  #resumen {
+    height: 180px;
+  }
+  
+  /* Botones */
+  
+  .editar__botones {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Estilos para los inputs */
+  
+  form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+  
+  .lado-1 {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .lado-2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .lado-3 {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  input, textarea{
+    height: 45px;
+  }
+
+  #contenido {
+    height: 420px;
+  }
+  
+  #resumen {
+    height: 180px;
+  }
+  
+  /* Botones */
+  
+  .editar__botones {
+    justify-content: center;
+    padding-right: 0;
+  }
 }
