@@ -62,16 +62,16 @@
           <label for="imagen">Imagen</label>
           <input type="file" name="imagen" id="imagen">
         </div>
+        <div class="lado-3">
+          <div class="input-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" id="fecha">
+          </div>
+          <div class="input-group">
+            <label for="hora">Hora</label>
+            <input type="time" name="hora" id="hora">
+          </div>
       </div>
-      <div class="lado-3">
-        <div class="input-group">
-          <label for="fecha">Fecha</label>
-          <input type="date" name="fecha" id="fecha">
-        </div>
-        <div class="input-group">
-          <label for="hora">Hora</label>
-          <input type="time" name="hora" id="hora">
-        </div>
       </div>
       <div class="lado-2">
         <div class="input-group">
