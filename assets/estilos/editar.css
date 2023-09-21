@@ -56,7 +56,7 @@ label {
 input, textarea{
   border: 2px #1455ce solid;  
   outline: none;
-  height: 30px;
+  height: 40px;
   padding: 10px;
   border-radius: 14px;
   font-size: 16px;
@@ -72,7 +72,7 @@ input, textarea{
 }
 
 #contenido {
-  height: 220px;
+  height: 520px;
   resize: none;
   overflow-y: scroll;
 }
@@ -82,7 +82,7 @@ input, textarea{
 }
 
 #resumen {
-  height: 82px;
+  height: 120px;
   resize: none;
 }
 
