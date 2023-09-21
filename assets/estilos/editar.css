@@ -17,12 +17,16 @@
 /* Estilos para los inputs */
 
 form {
-  width: 1000px;
+  width: 1200px;
   display: flex;
   background-color: #ff891aee;
   border-radius: 40px;
   overflow: hidden;
   margin-bottom: 100px;
+}
+
+form:nth-child(1) {
+  display: block;
 }
 
 .lado-1 {
