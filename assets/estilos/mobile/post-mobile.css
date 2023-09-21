@@ -17,6 +17,10 @@
     flex-direction: column;
   }
 
+  .posteos {
+    width: 100%;
+  }
+
   .post__imagen {
     width: 100%;
     margin-bottom: 50px;
@@ -40,6 +44,7 @@
   }
 
   aside {
+    width: 100%;
     margin: 40px 0;
     display: flex;
     flex-direction: column-reverse;

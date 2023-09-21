@@ -111,7 +111,7 @@
       <a href="https://www.facebook.com/argecitconsulting/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-facebook"></i>
       </a>
-      <a href="mailto:contacto@argec.net" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:rrhh@argec.net" target="_blank" rel="noopener noreferrer">
         <i class="fa-solid fa-envelope"></i>
       </a>
     </div>

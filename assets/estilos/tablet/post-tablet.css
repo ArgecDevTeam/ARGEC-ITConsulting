@@ -17,6 +17,10 @@
     flex-direction: column;
   }
 
+  .posteos {
+    width: 100%;
+  }
+
   .post__imagen {
     width: 700px;
     margin: 50px auto;
@@ -46,6 +50,7 @@
   aside {
     margin: 40px 0;
     gap: 100px;
+    width: 100%;
   }
 
   .buscador {
@@ -74,7 +79,6 @@
 
   .first-content p {
     width: 440px;
-    margin-right: 10px;
     font-size: 22px;
   }
 
