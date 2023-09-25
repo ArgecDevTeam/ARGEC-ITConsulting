@@ -1,5 +1,5 @@
 <?php
-  include('../php/bd.php');
+  include('./php/bd.php');
     
   if (isset($_GET['txtID'])){
     $txtID = (isset($_GET['txtID']) )?$_GET['txtID']:"";
@@ -28,18 +28,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../assets/img/No-background2.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/img/No-background2.webp" type="image/x-icon">
   <title><?php echo $titulo;?></title>
-  <link rel="stylesheet" href="../assets/estilos/main.css">
-  <link rel="stylesheet" href="../assets/estilos/post.css">
-  <link rel="stylesheet" href="../assets/estilos/mobile/post-mobile.css">
-  <link rel="stylesheet" href="../assets/estilos/tablet/post-tablet.css">
+  <link rel="stylesheet" href="./assets/estilos/main.css">
+  <link rel="stylesheet" href="./assets/estilos/post.css">
+  <link rel="stylesheet" href="./assets/estilos/mobile/post-mobile.css">
+  <link rel="stylesheet" href="./assets/estilos/tablet/post-tablet.css">
 </head>
 <body>
   <header class="header">
     <div class="header__menu">
-      <img src="../../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo">
-
+    <a href="./index.html"><img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo"></a>
       <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -47,7 +46,7 @@
         </label>
 
         <ul class="header__menu-items">
-          <li class="header__menu-links"><a href="../index.html">Inicio</a></li>
+          <li class="header__menu-links"><a href="./index.html">Inicio</a></li>
           <li class="header__menu-links"><a href="./about.html">Acerca Nuestro</a></li>
           <li class="header__menu-links header__menu-links--active"><a href="./blog.php">Blog</a></li>
           <li class="header__menu-links"><a href="./contact.html">Contáctenos</a></li>
@@ -67,7 +66,7 @@
   <section class="post">
     <div class="posteos">
       <div class="post__imagen">
-        <img src="../assets/img/post-img/<?php echo $nombreArchivo?>" alt="<?php echo $titulo?>">
+        <img src="./assets/img/post-img/<?php echo $nombreArchivo?>" alt="<?php echo $titulo?>">
         <div class="epigrafe">
           <span><?php echo $fecha?></span> | <span><?php echo $hora;?></span>
         </div>
@@ -100,7 +99,7 @@
   </section>
 
   <footer class="footer">
-    <img src="../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
+    <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
     <div class="footer__redes">
       <a href="https://www.linkedin.com/company/argec-itconsulting/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-linkedin"></i>

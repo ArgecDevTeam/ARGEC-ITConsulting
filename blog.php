@@ -1,5 +1,5 @@
 <?php
-  include('../php/bd.php');
+  include('./php/bd.php');
 
   $sentencia = $conexion->prepare("SELECT * FROM `publicaciones`");
   $sentencia->execute();
@@ -15,16 +15,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../assets/img/No-background2.webp" type="image/x-icon">
   <title>ARGEC - IT Consulting </title>
-  <link rel="stylesheet" href="../assets/estilos/main.css">
-  <link rel="stylesheet" href="../assets/estilos/blog.css">
-  <link rel="stylesheet" href="../assets/estilos/tablet/blog-tablet.css">
-  <link rel="stylesheet" href="../assets/estilos/mobile/blog-mobile.css">
+  <link rel="stylesheet" href="./assets/estilos/main.css">
+  <link rel="stylesheet" href="./assets/estilos/blog.css">
+  <link rel="stylesheet" href="./assets/estilos/tablet/blog-tablet.css">
+  <link rel="stylesheet" href="./assets/estilos/mobile/blog-mobile.css">
 </head>
 <body>
   <header class="header">
     <div class="header__menu">
-      <img src="../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo">
-
+    <a href="./index.html"><img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo"></a>
       <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -32,7 +31,7 @@
         </label>
 
         <ul class="header__menu-items">
-          <li class="header__menu-links"><a href="../index.html">Inicio</a></li>
+          <li class="header__menu-links"><a href="./index.html">Inicio</a></li>
           <li class="header__menu-links"><a href="./about.html">Acerca Nuestro</a></li>
           <li class="header__menu-links header__menu-links--active"><a href="./blog.php">Blog</a></li>
           <li class="header__menu-links"><a href="./contact.html">Contáctenos</a></li>
@@ -51,7 +50,7 @@
       <?php foreach ($listaPost as $publicacion) { ?>
         <div class="blog__tarjeta" id="Tarjeta">
           <div class="blog__imagen">
-            <img src="../assets/img/post-img/<?php echo $publicacion['nom_imagen'];?>" alt="<?php echo $publicacion['titulo'];?>" height="100%" width="100%">
+            <img src="./assets/img/post-img/<?php echo $publicacion['nom_imagen'];?>" alt="<?php echo $publicacion['titulo'];?>" height="100%" width="100%">
           </div>
           <div class="blog__texto">
             <h3><?php echo $publicacion['titulo'];?></h3>
@@ -60,7 +59,7 @@
             </p>
           </div>
           <div class="blog__botones" id="Boton">
-            <a href="../pages/post.php?txtID=<?php echo $publicacion['ID'];?>"><i class="fa-solid fa-arrow-right"></i></a>
+            <a href="./post.php?txtID=<?php echo $publicacion['ID'];?>"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       <?php }?>
@@ -71,7 +70,7 @@
   </section>
 
   <footer class="footer">
-    <img src="../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
+    <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
     <div class="footer__redes">
       <a href="https://www.linkedin.com/company/argec-itconsulting/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-linkedin"></i>

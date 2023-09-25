@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../assets/img/No-background2.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/img/No-background2.webp" type="image/x-icon">
   <title>ARGEC - IT Consulting</title>
-  <link rel="stylesheet" href="../assets/estilos/main.css">
-  <link rel="stylesheet" href="../assets/estilos/contact.css">
-  <link rel="stylesheet" href="../assets/estilos/mobile/contact-mobile.css">
-  <link rel="stylesheet" href="../assets/estilos/tablet/contact-tablet.css">
+  <link rel="stylesheet" href="./assets/estilos/main.css">
+  <link rel="stylesheet" href="./assets/estilos/contact.css">
+  <link rel="stylesheet" href="./assets/estilos/mobile/contact-mobile.css">
+  <link rel="stylesheet" href="./assets/estilos/tablet/contact-tablet.css">
 </head>
 <body>
   <header class="header">
     <div class="header__menu">
-      <img src="../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo">
+      <a href="./index.html"><img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="header__menu-logo"></a>
 
       <nav>
         <input type="checkbox" id="check">
@@ -22,7 +22,7 @@
         </label>
 
         <ul class="header__menu-items">
-          <li class="header__menu-links"><a href="../index.html">Inicio</a></li>
+          <li class="header__menu-links"><a href="./index.html">Inicio</a></li>
           <li class="header__menu-links"><a href="./about.html">Acerca Nuestro</a></li>
           <li class="header__menu-links"><a href="./blog.php">Blog</a></li>
           <li class="header__menu-links header__menu-links--active"><a href="./contact.html">Contáctenos</a></li>
@@ -44,7 +44,6 @@
       </div>
       <div class="form">
         <form id="contact-form" action="" method="post">
-          <!-- <input name="_redirect" type="hidden" id="name" value="http://127.0.0.1:5501/pages/contact.html"> -->
           <div class="contenedor__input">
             <div class ="formulario__input">
               <label for="from_name">Nombre <span>*</span></label>
@@ -63,14 +62,14 @@
           <button type="submit" class="formulario__boton" >Enviar</button>
         </form>
         <div class="imagen">
-          <img src="../assets/img/contacto-2.jpg" alt="">
+          <img src="./assets/img/contacto-2.jpg" alt="Grupo de trabajadores">
         </div>
       </div>
     </div>
   </section>
 
   <footer class="footer">
-    <img src="../assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
+    <img src="./assets/img/argec-header-no-background.webp" alt="ARGEC - IT Consulting" class="footer__logo">
     <div class="footer__redes">
       <a href="https://www.linkedin.com/company/argec-itconsulting/" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-linkedin"></i>
@@ -89,25 +88,7 @@
 
   <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init('eIo6T9RkMzCAZqqa2');
-    })();
-  </script>
-  <script type="text/javascript">
-    window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-          emailjs.sendForm('service_fu8gwnc', 'template_nhxq23x', this)
-          .then(function() {
-            alert('SUCCESS!');
-            document.getElementById('contact-form').reset();
-          }, function(error) {
-            console.log('FAILED...', error);
-          });
-      });
-    }
-  </script>
+  <script src="../assets/scripts/contacto.js"></script>
 </body>
 </html>
 

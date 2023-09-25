@@ -23,8 +23,9 @@
 .header__fondo h1 {
   color: #fff;
   font-size: 5rem;
-  width: 800px;
+  width: 1000px;
   text-align: center;
+  text-wrap: wrap;
 }
 
 .volver {
