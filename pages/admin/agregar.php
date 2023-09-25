@@ -44,6 +44,7 @@
   <link rel="stylesheet" href="../../assets/estilos/main.css">
   <link rel="stylesheet" href="../../assets/estilos/dashboard.css">
   <link rel="stylesheet" href="../../assets/estilos/editar.css">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 </head>
 <body>
   <header class="header__dashboard">
@@ -60,6 +61,7 @@
       <div class="lado-1">  
         <div class="input-group">
           <label for="imagen">Imagen</label>
+          <img src="../../assets/img/cargaImagen.jpg" id="preview"></img>
           <input type="file" name="imagen" id="imagen">
         </div>
         <div class="lado-3">
@@ -80,11 +82,11 @@
         </div>
         <div class="input-group">
           <label for="contenido">Contendio</label>
-          <textarea type="text" name="contenido" id="contenido" required></textarea>
+          <textarea name="contenido" id="contenido"></textarea>
         </div>
         <div class="input-group">
           <label for="resumen">Resumen</label>
-          <textarea type="text" name="resumen" id="resumen" maxlength="180"></textarea>
+          <textarea type="text" name="resumen" id="resumen" maxlength="180" required></textarea>
         </div>
         <div class="editar__botones">
           <input type="submit" value="Enviar" class="btn-editar">
@@ -95,5 +97,7 @@
   </section>
 
   <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
+  <script src="//cdn.ckeditor.com/4.22.0/standard/ckeditor.js"></script>
+  <script src="../../assets/scripts/adminPost.js"></script>
 </body>
 </html>
