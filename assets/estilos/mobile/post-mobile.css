@@ -1,6 +1,17 @@
 @media screen and (max-width: 767px) {
   .header__fondo {
-    padding: 140px 14px 30px 14px;
+    padding: 30px 14px 30px 14px;
+    align-items: center;
+  }
+    
+  .header__menu {
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .header__titulo {
+    height: auto;
+    margin-top: calc(200px - 6rem);
   }
 
   .header__fondo h1 {
@@ -33,6 +44,10 @@
   .post__contenido {
     width: 100%;
     text-wrap: wrap;
+  }
+
+  .post__contenido p {
+    margin-left: 0 !important;
   }
 
   .post__contenido h5 {
@@ -73,5 +88,4 @@
     cursor: pointer;
     transform: scale(1.04);
   }
-
 }

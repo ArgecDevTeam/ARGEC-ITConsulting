@@ -18,7 +18,7 @@
     $resumen = $lista['resumen'];  
   }
   
-  $sentencia = $conexion->prepare("SELECT * FROM `publicaciones`");
+  $sentencia = $conexion->prepare("SELECT * FROM `publicaciones` ORDER BY ID DESC LIMIT 3");
   $sentencia->execute();
   $listaPost = $sentencia->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -76,12 +76,12 @@
       </div>
     </div>
     <aside>
-      <div class="buscador">
-        <input type="search" name="" id="" placeholder="Buscar...">
-        <button class="buscador-icono">
+      <form class="buscador" method="post" action="./busqueda.php">
+        <input type="search" name="buscar" id="buscar">
+        <button class="buscador-icono" type="submit" name="enviar">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
-      </div>
+      </form>
       <div class="post__ultimos">
         <h4>Ultimos Posteos</h4>
         <?php foreach ($listaPost as $publicacion) { ?>

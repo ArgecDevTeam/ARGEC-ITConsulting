@@ -94,6 +94,10 @@
   margin: 10px 0;
 }
 
+.post__contenido ul,ol {
+  margin-left: 60px;
+}
+
 aside {
   width: 30%;
   margin: 8rem 0;
