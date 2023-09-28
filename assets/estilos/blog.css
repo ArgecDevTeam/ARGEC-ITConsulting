@@ -38,7 +38,7 @@
 }
 
 .blog__contenedor {
-  width: 1000px;
+  width: 822px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -48,8 +48,8 @@
 /* Diseño de las tarjetas del blog */
 
 .blog__tarjeta {
-  height: 350px;
-  width: 300px;
+  height: 410px;
+  width: 260px;
   border-radius: 30px;
   overflow: hidden;
   position: relative;
@@ -72,6 +72,11 @@
 
 .blog__texto {
   padding: 10px;
+  height: 208px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
 } 
 
 .blog__texto h3 {
@@ -111,13 +116,15 @@
 /* Boton cargar mas */
 
 .blog__boton {
-  display: none;
   margin-top: 50px;
-}
-
-.blog__boton button {
   height: 50px;
   width: 120px;
+  border: 1px blue solid;
+}
+
+.blog__boton input {
+  height: 100%;
+  width: 100%;
   border: none;
   border-radius: 30px;
   background-color: #1455cec2;

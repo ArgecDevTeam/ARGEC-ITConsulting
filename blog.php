@@ -1,10 +1,12 @@
 <?php
   include('./php/bd.php');
 
-  $sentencia = $conexion->prepare("SELECT * FROM `publicaciones`");
+
+  $limitePagina = 6;
+
+  $sentencia = $conexion->prepare("SELECT * FROM `publicaciones` ORDER BY ID DESC LIMIT $limitePagina");
   $sentencia->execute();
   $listaPost = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 
@@ -65,7 +67,7 @@
       <?php }?>
     </div>
     <div class="blog__boton">
-      <button>Cargar mas</button>
+      <input type="submit" name="paginas" style="border: 1px red solid; " value="Cargar mas">
     </div>
   </section>
 

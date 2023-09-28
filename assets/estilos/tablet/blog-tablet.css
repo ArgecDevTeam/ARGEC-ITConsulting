@@ -34,7 +34,7 @@
   /* Diseño de las tarjetas del blog */
   
   .blog__tarjeta {
-    height: 350px;
+    height: 420px;
     width: 300px;
     border-radius: 30px;
     overflow: hidden;
@@ -94,6 +94,9 @@
   
   .blog__boton {
     margin-top: 50px;
+    height: 50px;
+    width: 120px;
+    border: 1px blue solid;
   }
   
   .blog__boton button {
