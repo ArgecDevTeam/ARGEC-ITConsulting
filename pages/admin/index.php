@@ -61,7 +61,7 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Titulo</th>
+          <th style="width: 500px;">Titulo</th>
           <th>Imagen</th>
           <th>Fecha</th>
           <th>Hora</th>

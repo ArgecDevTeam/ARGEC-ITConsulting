@@ -9,7 +9,7 @@ body {
 
 .alerta {
   position: absolute;
-  top: 100px;
+  top: 50px;
   background-color: rgb(245, 124, 124);
   color: red;
   height: 50px;
@@ -65,12 +65,25 @@ input {
   border-radius: 20px;
 }
 
-.login input:focus {
+.input-group input:focus {
   border: 2px #1455ce solid;
 }
 
-.login input::placeholder {
+.input-group input::placeholder {
   color: #1455ce;
+}
+
+.input-group:nth-child(2) {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group .mostrar {
+  position: absolute;
+  right: 10px;
+  color: #000;
+  cursor: pointer;
 }
 
 .login .btn__login {

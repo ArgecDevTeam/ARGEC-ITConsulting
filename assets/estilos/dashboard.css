@@ -48,10 +48,9 @@
 
 .dashboard {
   display: flex;
-  height: 100vh;
+  height: auto;
   width: 100%;
   justify-content: center;
-  align-items: self-start;
   padding: 4rem 0;
 }
 
@@ -71,7 +70,7 @@ th {
 td {
   border: 1px black solid;
   text-align: center;
-  height: 35px;
+  height: 55px;
 }
 
 td a {

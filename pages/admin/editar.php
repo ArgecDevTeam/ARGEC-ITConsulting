@@ -125,7 +125,7 @@
         </div>
         <div class="input-group">
           <label for="titulo">Titulo</label>
-          <input value="<?php echo $titulo;?>" type="text" name="titulo" id="titulo" maxlength="50">
+          <input value="<?php echo $titulo;?>" type="text" name="titulo" id="titulo" maxlength="150">
         </div>
         <div class="input-group">
           <label for="contenido">Contendio</label>
@@ -146,7 +146,7 @@
   </section>
 
   <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
-  <script src="//cdn.ckeditor.com/4.22.0/standard/ckeditor.js"></script>
+  <script src="//cdn.ckeditor.com/4.22.0/full/ckeditor.js"></script>
   <script src="../../assets/scripts/adminPost.js"></script>
 </body>
 </html>

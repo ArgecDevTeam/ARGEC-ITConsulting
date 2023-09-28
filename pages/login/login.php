@@ -1,8 +1,13 @@
 <?php 
   session_start();
+  if (!isset($_SESSION['intentos'])) {
+    $_SESSION['intentos'] = 0; // Inicializa el contador de intentos
+  }
+
+  $maximoIntentos = 3;
+
   if ($_POST){
     include('../../php/bd.php');
-
     $usuario = (isset($_POST['usuario'])) ?$_POST['usuario'] : '';
     $password = (isset($_POST['password'])) ?$_POST['password'] : '';
     
@@ -16,13 +21,24 @@
     $sentencia->execute();
     $listaUser = $sentencia->fetch(PDO::FETCH_LAZY);
 
-    if ($listaUser['usuario'] > 0){
+    if ($listaUser['usuario'] === $usuario and $listaUser['password'] === $password){
+
       $_SESSION['usuario'] = $listaUser['usuario'];
       $_SESSION['logueado'] = true;
       header("Location: ../admin/index.php");
-    }else{
+      exit();
+    }else {
+      // Usuario o contraseña incorrectos, incrementa el contador de intentos
+      $_SESSION['intentos']++;
+      
       $mensaje = 'ERROR: Usuario o contraseña incorrectos';
+      // Si se excede el número máximo de intentos, redirige a otra página
+      if ($_SESSION['intentos'] >= $maximoIntentos) {
+        header('Location: ../../index.html');
+        exit();
+      }
     }
+
   }
 ?>
 
@@ -51,11 +67,10 @@
       <form class="loginForm" action="" method="post">
         <div class="input-group">
           <input type="text" id="usuario" name="usuario" placeholder="Usuario">
-          <span class="error-message"></span>
         </div>
         <div class="input-group">
           <input type="password" id="password" name="password" placeholder="Contraseña">
-          <span class="error-message"></span>
+          <i class="fa-regular fa-eye mostrar"></i>
         </div>
         <input class="btn__login" type="submit" value="Iniciar Sesion">
       </form>
@@ -63,5 +78,6 @@
   </section>
 
   <script src="https://kit.fontawesome.com/80ad4ec867.js" crossorigin="anonymous"></script>
+  <script src="../../assets/scripts/login.js"></script>
 </body>
 </html>
