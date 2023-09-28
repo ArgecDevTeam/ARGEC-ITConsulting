@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .header__menu {
+    position: fixed;
+  }
+
+  .header__fondo {
+    padding: 140px 44px 30px 44px;
+  }
+
+  .volver {
+    display: none;
+  }
+
+  .post {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posteos {
+    width: 100%;
+    justify-content: center;
+  }
+
+  aside {
+    margin: 40px 0;
+    gap: 100px;
+    width: 100%;
+  }
+
+  .buscador {
+    width: 700px;
+    margin: 22px auto;
+  }
+
+  .post__ultimos h4 {
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .card {
+    width: 680px;
+    height: 120px;
+    margin: auto;
+  }
+
+  .first-content {
+    justify-content: space-between;
+  }
+
+  .first-content img {
+    width: 200px;
+  }
+
+  .first-content p {
+    width: 440px;
+    font-size: 22px;
+  }
+
+  .card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+
+}

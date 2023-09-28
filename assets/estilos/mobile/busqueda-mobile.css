@@ -1,0 +1,56 @@
+@media screen and (max-width: 767px) {
+  .header__fondo {
+    padding: 20px;
+  }
+
+  .header__fondo h1 {
+    font-size: 3rem;
+  }
+
+  .volver {
+    display: none;
+  }
+
+  .post {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posteos {
+    width: 100%;
+    justify-content: center;
+  }
+
+  aside {
+    width: 100%;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 100px;
+  }
+
+  .post__ultimos h4 {
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .first-content {
+    justify-content: space-between;
+  }
+
+  .first-content p {
+    width: 240px;
+    margin-right: 10px;
+  }
+
+  .card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+
+}
