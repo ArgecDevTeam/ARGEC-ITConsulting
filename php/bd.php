@@ -1,8 +1,8 @@
 <?php
-$servidor = 'localhost';
-$baseDeDatos = 'blog-argec';
-$usuario = 'root';
-$password = '1234';
+$servidor = '********';
+$baseDeDatos = '********';
+$usuario = '******';
+$password = '******';
 
 try{
   $conexion = new PDO("mysql:host=$servidor;dbname=$baseDeDatos",$usuario,$password);
